@@ -109,30 +109,23 @@ function resolvePriceAndPromo(p: any, name: string, rawDesc = '') {
   const rawSaleRs = Number(p.prices?.sale_price || 0) / 100;
   const combinedText = `${name} ${rawDesc}`;
 
-  // 1. Buy One Get One Free (2 units sold together as a BOGO pair)
-  const bogoTwoUnitsMatch = name.match(
-    /buy\s*one\s*get\s*one\s*free[\s\S]*?2\s*units\s*at\s*Rs\s*([\d,]+)/i
-  );
-  if (bogoTwoUnitsMatch) {
-    const pairPrice = Number(bogoTwoUnitsMatch[1].replace(/,/g, ''));
-    const fullValue = rawRegularRs > pairPrice ? rawRegularRs : pairPrice * 2;
-    return {
-      priceRs: pairPrice,
-      regularPriceRs: fullValue,
-      onSale: true,
-      hasPromo: true,
-      promoBadge: 'Buy One Get One Free (Price for 2 Units)',
-    };
-  }
-
+  // 1. Buy One Get One Free (ONLY when actively on sale on abdesai.mu: p.on_sale === true)
   if (/buy\s*one\s*get\s*one\s*free/i.test(name)) {
-    const pairPrice = rawSaleRs > 0 && rawSaleRs < rawPriceRs ? rawSaleRs : rawPriceRs;
+    if (p.on_sale && rawRegularRs > rawPriceRs) {
+      return {
+        priceRs: rawPriceRs,
+        regularPriceRs: rawRegularRs,
+        onSale: true,
+        hasPromo: true,
+        promoBadge: 'Buy One Get One Free (Price for 2 Units)',
+      };
+    }
     return {
-      priceRs: pairPrice,
-      regularPriceRs: rawRegularRs > pairPrice ? rawRegularRs : undefined,
-      onSale: true,
-      hasPromo: true,
-      promoBadge: 'Buy One Get One Free (Price for 2 Units)',
+      priceRs: rawPriceRs,
+      regularPriceRs: undefined,
+      onSale: false,
+      hasPromo: false,
+      promoBadge: undefined,
     };
   }
 
@@ -473,14 +466,17 @@ function diffCatalogSnapshots(
 }
 
 async function fetchLiveAbDesaiCatalog() {
+  const ts = Date.now();
   const byId = new Map<number, any>();
   for (let page = 1; page <= 5; page++) {
     const res = await fetch(
-      `https://abdesai.mu/wp-json/wc/store/products?tag=359&per_page=100&page=${page}`,
+      `https://abdesai.mu/wp-json/wc/store/products?tag=359&per_page=100&page=${page}&_=${ts}`,
       {
         headers: {
           'User-Agent': 'ABDesai-Storefront-Sync/1.0',
           Accept: 'application/json',
+          'Cache-Control': 'no-cache, no-store',
+          Pragma: 'no-cache',
         },
       }
     );
@@ -496,11 +492,13 @@ async function fetchLiveAbDesaiCatalog() {
   // Also query search="american tourister" so any new product published without tag=359 is still captured
   for (let page = 1; page <= 4; page++) {
     const res = await fetch(
-      `https://abdesai.mu/wp-json/wc/store/products?search=american+tourister&per_page=100&page=${page}`,
+      `https://abdesai.mu/wp-json/wc/store/products?search=american+tourister&per_page=100&page=${page}&_=${ts}`,
       {
         headers: {
           'User-Agent': 'ABDesai-Storefront-Sync/1.0',
           Accept: 'application/json',
+          'Cache-Control': 'no-cache, no-store',
+          Pragma: 'no-cache',
         },
       }
     );
@@ -515,7 +513,14 @@ async function fetchLiveAbDesaiCatalog() {
     if (data.length < 100) break;
   }
 
-  const all = Array.from(byId.values());
+  // Filter out expired BOGO promo-only listings where WooCommerce on_sale has been turned off (e.g. Senna BOGO 55950)
+  const all = Array.from(byId.values()).filter((p) => {
+    const rawName = decodeEntities(p.name || '');
+    if (/buy\s*one\s*get\s*one\s*free/i.test(rawName) && !p.on_sale) {
+      return false;
+    }
+    return true;
+  });
   if (all.length === 0) {
     throw new Error('Empty response from abdesai.mu WooCommerce API');
   }

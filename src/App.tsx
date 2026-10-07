@@ -112,7 +112,6 @@ const POPULAR_SERIES = [
   'Novastream',
   'Gemina Pro',
   'Mystic',
-  'Senna',
   'Maxplus',
   'Ellipso',
   'Skylette',
@@ -533,13 +532,11 @@ export default function App() {
   const heroPromoItems = useMemo(() => {
     const curatedPromoIds = [
       56981, // Jamaica Medium 3 pcs (3 × Medium at Rs 11,990, Was Rs 17,970)
-      56918, // Senna LARGE BOGO (2 Units at Rs 9,000)
-      55950, // Senna MEDIUM BOGO (2 Units at Rs 7,500)
+      56513, // Jamaica Cabin + Large Navy Blue (Rs 9,000, Was Rs 12,300)
       56583, // Skytrac Large Offer (2 Units at Rs 12,000)
       56584, // Skytrac Medium Offer (2 Units at Rs 10,500)
       56582, // Skytrac Cabin Offer (2 Units at Rs 8,250)
       41271, // Skytrac Set of 3 Navy (Rs 15,990)
-      56513, // Jamaica Cabin + Large Navy Blue (Rs 9,000)
       50400, // Skylette Set 3pcs Navy Blue (Rs 16,990)
       55860, // Dashway Set 3 Grey Black (Rs 16,500)
       50787, // Duncan Set of 3 Navy Blue (Rs 16,500)
@@ -547,9 +544,10 @@ export default function App() {
       55872, // Gemina PRO L Black + Free Copper Bottle (Rs 9,495)
       47874, // Novastream Medium + Free RICO Rice Cooker (Rs 10,990)
       47808, // Bricklane 80cm + Get 1 Cabin at Half Price (Rs 8,000)
+      52138, // Aerospin XL Stone Basalt + Free Baseus Powerbank (Rs 9,000)
     ];
     const matched = curatedPromoIds
-      .map((id) => products.find((p) => p.id === id))
+      .map((id) => products.find((p) => p.id === id && p.hasPromo))
       .filter((p): p is AbDesaiATProduct => Boolean(p));
     return matched.length > 0 ? matched : products.filter((p) => p.hasPromo);
   }, [products]);
@@ -621,7 +619,7 @@ export default function App() {
               <span>Official A.B. Desai American Tourister Store (abdesai.mu)</span>
               <span className="mx-2 text-white/40" aria-hidden="true">·</span>
               <span className="text-[#D4B886]">
-                Jamaica 3× Medium Rs 11,990 · Cabin+XL Rs 9,000 · Senna BOGO (2 at Rs 7,500) · Skytrac 2nd at 50% Off
+                Jamaica 3× Medium Rs 11,990 · Jamaica Cabin+XL Rs 9,000 · Skytrac 2nd at 50% Off · Skylette 3-Pc Set Rs 16,990
               </span>
             </p>
             <button
@@ -789,8 +787,8 @@ export default function App() {
               </h1>
 
               <p className="text-base text-[#65645E] leading-relaxed max-w-xl">
-                Every suitcase, 3-piece set, BOGO bundle, and price is verified and live-synced with{' '}
-                <strong>abdesai.mu</strong>. Shop Skytrac (2nd at 50% off), Senna Buy-1-Get-1-Free, Jamaica Cabin + Large Combos, Dashway, Duncan, Novastream, and Gemina Pro with official images and 3-Year Global Warranty.
+                Every suitcase, 3-piece set, combo bundle, and price is verified and live-synced with{' '}
+                <strong>abdesai.mu</strong>. Shop Jamaica 3× Medium Sets & Cabin + XL Combos, Skytrac (2nd at 50% off), Bricklane (Cabin at 50% off), Dashway, Duncan, Novastream, and Gemina Pro with official images and 3-Year Global Warranty.
               </p>
 
               {/* Single Focal CTA + Printable Shelf Talkers + Social Share */}
@@ -1039,7 +1037,7 @@ export default function App() {
                   type="search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search Skytrac, Senna, Dashway, Purple..."
+                  placeholder="Search Skytrac, Jamaica, Bricklane, Dashway..."
                   className="w-full pl-9 pr-3.5 py-2 text-xs bg-white border border-black/15 rounded-lg focus:outline-none focus:border-[#0F2942]"
                 />
               </div>

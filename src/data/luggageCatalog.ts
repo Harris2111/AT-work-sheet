@@ -2281,26 +2281,6 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Black Material: POLYESTER Volume: 56L Dimension: 55 × 36 × 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
   },
   {
-    "id": 55950,
-    "name": "AMERICAN TOURISTER Senna MEDIUM As Per Colour Available Rs 7500 each – Buy One Get One Free – Promo Offer , 2 units at Rs 7500",
-    "slug": "senna-medium",
-    "sku": "Senna M As per colour available",
-    "series": "Senna",
-    "sizeCategory": "Combo / 2-Pack",
-    "priceRs": 7500,
-    "regularPriceRs": 15000,
-    "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "Buy One Get One Free (Price for 2 Units)",
-    "inStock": true,
-    "permalink": "https://abdesai.mu/product/senna-medium/",
-    "image": "https://abdesai.mu/wp-content/uploads/2026/10/Senna-generic.webp",
-    "gallery": [
-      "https://abdesai.mu/wp-content/uploads/2026/10/Senna-generic.webp"
-    ],
-    "specsText": "Medium Size: 69x47x31cm Expandable to 34cm Volume/Weight: 77L-85L / 4.0Kg Warranty : 3 years Global warranty in more than 120 countries"
-  },
-  {
     "id": 55892,
     "name": "AMERICAN TOURISTER Grid DBag Grey",
     "slug": "grid-dbag-grey",
@@ -4158,7 +4138,7 @@ export const CORE_16_PROMO_IDS: number[] = [
   50396, // Skylette Set of 3 Black Grey — Rs 16,990 (Save Rs 9,490)
   55925, // Gemina Pro L Black + Free 950ml Copper Bottle — Rs 9,495
   47875, // Novastream Large Navy Blue + Free RICO Travel Rice Cooker — Rs 13,000
-  55950, // Senna Medium Buy 1 Get 1 Free (2 Units) — Rs 7,500
+  52138, // Aerospin XL Stone Basalt + Free Baseus Powerbank — Rs 9,000
   56522, // Dash Pop Cabin + Medium Black — Rs 15,990
 ];
 

@@ -1121,7 +1121,6 @@ export const ALL_DISPLAY_SERIES_ORDER = [
   'Hundo',
   'Aerospin',
   'Dash Pop',
-  'Senna',
   'Maxplus',
   'Curio',
   'Majoris',

@@ -224,7 +224,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 Your travel bag is currently empty
               </h3>
               <p className="text-xs text-[#65645E] max-w-xs mx-auto">
-                Explore American Tourister Skytrac, Senna BOGO, Jamaica Combos, Dashway, or Duncan sets.
+                Explore American Tourister Skytrac, Jamaica 3× Medium & Cabin+XL Combos, Dashway, or Duncan sets.
               </p>
             </div>
           ) : (
