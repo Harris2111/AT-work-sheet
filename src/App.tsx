@@ -621,7 +621,7 @@ export default function App() {
               <span>Official A.B. Desai American Tourister Store (abdesai.mu)</span>
               <span className="mx-2 text-white/40" aria-hidden="true">·</span>
               <span className="text-[#D4B886]">
-                Senna BOGO (2 at Rs 7,500 / Rs 9,000) · Skytrac 2nd at 50% Off · Jamaica Cabin+Large Rs 9,000
+                Jamaica 3× Medium Rs 11,990 · Cabin+XL Rs 9,000 · Senna BOGO (2 at Rs 7,500) · Skytrac 2nd at 50% Off
               </span>
             </p>
             <button
@@ -638,7 +638,7 @@ export default function App() {
 
       {/* Strict 3-Zone Top Bar Contract */}
       <header className="sticky top-0 z-30 bg-[#F9F9F8]/95 backdrop-blur-xs border-b border-black/8">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
           {/* Zone 1: Single text element wordmark */}
           <a
             href="#top"
@@ -649,13 +649,13 @@ export default function App() {
               setSearchQuery('');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="font-display text-2xl font-semibold tracking-tight text-[#141413] whitespace-nowrap shrink-0"
+            className="font-display text-xl lg:text-2xl font-semibold tracking-tight text-[#141413] whitespace-nowrap shrink-0"
           >
             A.B. Desai · American Tourister
           </a>
 
-          {/* Zone 2: 5 clean text navigation links */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-[#65645E]">
+          {/* Zone 2: Clean store navigation links (no duplicates of action buttons) */}
+          <nav className="hidden xl:flex items-center gap-5 text-sm font-medium text-[#65645E]">
             <a
               href="#collection"
               onClick={() => {
@@ -664,7 +664,7 @@ export default function App() {
               }}
               className="hover:text-[#141413] hover:underline underline-offset-4 transition-colors whitespace-nowrap"
             >
-              All 193 Products
+              All {products.length} Products
             </a>
             <a
               href="#collection"
@@ -676,25 +676,6 @@ export default function App() {
             >
               Promos & BOGO
             </a>
-            <button
-              type="button"
-              onClick={() => {
-                setInitialShelfTalkerId(null);
-                setIsShelfTalkerOpen(true);
-              }}
-              className="hover:text-[#141413] hover:underline underline-offset-4 transition-colors cursor-pointer whitespace-nowrap inline-flex items-center gap-1.5 text-[#0F2942] font-semibold"
-            >
-              <Printer className="w-3.5 h-3.5" />
-              <span>Print Shelf Talkers</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setIsPriceListOpen(true)}
-              className="hover:text-[#141413] hover:underline underline-offset-4 transition-colors cursor-pointer whitespace-nowrap inline-flex items-center gap-1.5 text-[#0F2942] font-semibold"
-            >
-              <FileSpreadsheet className="w-3.5 h-3.5" />
-              <span>Master Price List</span>
-            </button>
             <a
               href="#showrooms"
               className="hover:text-[#141413] hover:underline underline-offset-4 transition-colors whitespace-nowrap"
@@ -703,12 +684,12 @@ export default function App() {
             </a>
           </nav>
 
-          {/* Zone 3: Primary actions including Live Alerts & Master Price List */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Zone 3: Primary actions — Live Alerts, Shelf Talkers, Master Price List, Share Store & Bag */}
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               type="button"
               onClick={() => setIsAlertCenterOpen(true)}
-              className={`relative inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg border transition-colors cursor-pointer whitespace-nowrap ${
+              className={`relative inline-flex items-center gap-1.5 px-2.5 py-2 text-xs font-semibold rounded-lg border transition-colors cursor-pointer whitespace-nowrap ${
                 changeEvents.some((e) => !seenEventIds.has(e.id))
                   ? 'bg-[#FFD166] text-[#141413] border-[#B81D24] shadow-xs'
                   : 'bg-white text-[#0F2942] border-black/15 hover:bg-[#EFECE6]'
@@ -723,7 +704,7 @@ export default function App() {
                 )}
                 <span className="w-2 h-2 rounded-full bg-emerald-500 absolute -top-0.5 -right-0.5" />
               </span>
-              <span className="hidden sm:inline">Live Site Alerts</span>
+              <span className="hidden md:inline">Live Alerts</span>
               {changeEvents.filter((e) => !seenEventIds.has(e.id)).length > 0 && (
                 <span className="px-1.5 py-0.2 text-[10px] font-mono-tabular font-black bg-[#B81D24] text-white rounded-full">
                   {changeEvents.filter((e) => !seenEventIds.has(e.id)).length}
@@ -737,7 +718,7 @@ export default function App() {
                 setInitialShelfTalkerId(null);
                 setIsShelfTalkerOpen(true);
               }}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-[#141413] bg-[#FFD166] border border-black/20 rounded-lg hover:bg-[#f5c44f] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-[#141413] bg-[#FFD166] border border-black/20 rounded-lg hover:bg-[#f5c44f] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
               title="Open Printable A6 & A4 Showroom Shelf Talker Studio"
             >
               <Printer className="w-3.5 h-3.5 text-[#B81D24]" />
@@ -747,7 +728,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setIsPriceListOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-[#B81D24] rounded-lg hover:bg-[#96161C] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-[#B81D24] rounded-lg hover:bg-[#96161C] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
             >
               <FileSpreadsheet className="w-3.5 h-3.5" />
               <span>Master Price List</span>
@@ -759,7 +740,7 @@ export default function App() {
                 setShareProduct(null);
                 setIsShareOpen(true);
               }}
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-[#141413] bg-white border border-black/15 rounded-lg hover:bg-[#EFECE6] transition-colors cursor-pointer whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-2 text-xs font-semibold text-[#141413] bg-white border border-black/15 rounded-lg hover:bg-[#EFECE6] transition-colors cursor-pointer whitespace-nowrap"
             >
               <Share2 className="w-3.5 h-3.5 text-[#0F2942]" />
               <span>Share Store</span>
@@ -768,7 +749,7 @@ export default function App() {
             <button
               type="button"
               onClick={() => setIsCartOpen(true)}
-              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-white bg-[#0F2942] rounded-lg hover:bg-[#091A2B] transition-colors cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-white bg-[#0F2942] rounded-lg hover:bg-[#091A2B] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
             >
               <ShoppingBag className="w-3.5 h-3.5" />
               <span>Bag ({totalBagCount})</span>
