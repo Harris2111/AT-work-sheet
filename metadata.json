@@ -1,0 +1,6 @@
+{
+  "name": "AB Desai Travel — Official Samsonite & American Tourister Store Mauritius",
+  "description": "Shop authentic Samsonite and American Tourister luggage, hardside spinners, softside sets, and backpacks from AB Desai (abdesai.mu) in Mauritius with free home delivery from Rs 3,000 and instant social media sharing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
