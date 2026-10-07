@@ -1326,7 +1326,7 @@ export function getCompleteSeriesLineup(
 
   // Series-level headline & promo callout
   let heroPromoBanner = `ALL SIZES, SPECS & PRICES AT A GLANCE`;
-  let bottomPromoCallout = `3-YEAR GLOBAL WARRANTY · FREE DELIVERY (> RS 3,000)`;
+  let bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
 
   if (seriesName === 'Bricklane') {
     heroPromoBanner = `BUY MEDIUM OR LARGE → GET CABIN AT 50% OFF!`;

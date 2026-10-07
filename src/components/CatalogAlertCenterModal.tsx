@@ -45,7 +45,7 @@ export function buildWhatsAppAlertUrl(events: CatalogChangeEvent[]): string {
     `-----------------------------------------`,
     `Please update showroom price tags / Shelf Talkers across Port-Louis, Tribeca, Trianon, Bagatelle, Cascavelle & Rose-Belle.`,
   ];
-  return `https://wa.me/23054988887?text=${encodeURIComponent(
+  return `https://wa.me/23059797960?text=${encodeURIComponent(
     lines.join('\n')
   )}`;
 }
@@ -329,7 +329,7 @@ export const CatalogAlertCenterModal: React.FC<CatalogAlertCenterModalProps> = (
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 px-2.5 py-1 font-semibold bg-[#1B5E3A] text-white rounded hover:bg-[#14492D] cursor-pointer"
-                  title="Forward change report to AB Desai WhatsApp (+230 5498 8887) or Showroom Managers"
+                  title="Forward change report to AB Desai WhatsApp (+230 5979 7960) or Showroom Managers"
                 >
                   <MessageCircle className="w-3 h-3" />
                   <span>Forward All to WhatsApp</span>

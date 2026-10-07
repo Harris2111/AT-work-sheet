@@ -11,7 +11,7 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 import { AbDesaiATProduct, formatRs } from '../data/luggageCatalog';
-import { ProductImage } from './ProductImage';
+import { ProductImage, getProxiedImageUrl } from './ProductImage';
 
 interface SocialShareModalProps {
   isOpen: boolean;
@@ -65,7 +65,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
       : undefined;
 
   const cardPromo =
-    activeProduct.promoBadge || 'Free Mauritius Delivery from Rs 3,000';
+    activeProduct.promoBadge || 'Confirm Availability Before Payment · Home Delivery Up to 10 Days';
 
   // Short, punchy 1-line CTA + link (NO long text blocks)
   const punchyShareMessage = `${cardHeadline} (${cardPrice}) — Shop Now: ${shareUrl}`;
@@ -115,7 +115,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
     ctx.textAlign = 'left';
 
     // 3. Load Product Image via CORS-safe proxy
-    const proxyUrl = `/api/proxy-image?url=${encodeURIComponent(previewImg)}`;
+    const proxyUrl = getProxiedImageUrl(previewImg);
     const imgAreaTop = 110;
     const imgAreaHeight = aspect === 'story' ? 1050 : 540;
 
@@ -222,7 +222,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
       ctx.font = '400 22px "Plus Jakarta Sans", sans-serif';
       ctx.textAlign = 'center';
       ctx.fillText(
-        'Port-Louis · Tribeca · Trianon · Bagatelle · Cascavelle · Rose-Belle · +230 5498 8887',
+        'Port-Louis · Tribeca · Trianon · Bagatelle · Cascavelle · Rose-Belle · +230 5979 7960',
         width / 2,
         height - 56
       );

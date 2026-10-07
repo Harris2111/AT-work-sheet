@@ -7,6 +7,19 @@ interface ProductImageProps {
   series: string;
   title: string;
   className?: string;
+  eager?: boolean;
+  useProxy?: boolean;
+}
+
+export function getProxiedImageUrl(src: string): string {
+  const clean = (src || '').trim();
+  if (!clean) return '';
+  if (/^https?:\/\/(?:www\.)?abdesai\.mu\//i.test(clean)) {
+    return `/api/proxy-image?url=${encodeURIComponent(
+      clean.replace(/^http:\/\//i, 'https://')
+    )}`;
+  }
+  return clean;
 }
 
 export const ProductImage: React.FC<ProductImageProps> = ({
@@ -15,9 +28,15 @@ export const ProductImage: React.FC<ProductImageProps> = ({
   series,
   title,
   className = '',
+  eager = false,
+  useProxy = false,
 }) => {
-  const [failedSrc, setFailedSrc] = useState<string | null>(null);
   const cleanSrc = typeof src === 'string' ? src.trim() : '';
+  const initialUrl = useProxy ? getProxiedImageUrl(cleanSrc) : cleanSrc;
+  const fallbackProxyUrl = getProxiedImageUrl(cleanSrc);
+
+  const [triedProxyFallback, setTriedProxyFallback] = useState(false);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
 
   if (!cleanSrc || failedSrc === cleanSrc) {
     return (
@@ -35,13 +54,25 @@ export const ProductImage: React.FC<ProductImageProps> = ({
     );
   }
 
+  const activeUrl =
+    triedProxyFallback && fallbackProxyUrl !== initialUrl
+      ? fallbackProxyUrl
+      : initialUrl;
+
   return (
     <img
-      src={cleanSrc}
+      src={activeUrl}
       alt={alt}
       referrerPolicy="no-referrer"
-      loading="lazy"
-      onError={() => setFailedSrc(cleanSrc)}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding={eager ? 'sync' : 'async'}
+      onError={() => {
+        if (!triedProxyFallback && fallbackProxyUrl !== initialUrl) {
+          setTriedProxyFallback(true);
+        } else {
+          setFailedSrc(cleanSrc);
+        }
+      }}
       className={className}
     />
   );

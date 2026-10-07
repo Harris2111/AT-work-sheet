@@ -29,7 +29,7 @@ import {
   getCompleteSeriesLineup,
   CompleteSeriesLineup,
 } from '../data/productSpecs';
-import { ProductImage } from './ProductImage';
+import { ProductImage, getProxiedImageUrl } from './ProductImage';
 
 interface ShelfTalkerStudioModalProps {
   isOpen: boolean;
@@ -437,7 +437,7 @@ function buildHighImpactRetailCopy(
         : `${specs.sizeClass.toUpperCase()}: ${specs.dimensionsCm} · ${specs.volumeLitres} · ${specs.weightKg}`,
     urgencySubtext:
       item.priceRs > 0
-        ? `3-YEAR GLOBAL WARRANTY · FREE DELIVERY IN MAURITIUS (> RS 3,000)`
+        ? `CONFIRM AVAILABILITY BEFORE PAYMENT · HOME DELIVERY UP TO 10 DAYS`
         : `OFFICIAL AMERICAN TOURISTER SPECIFICATION CARD · A.B. DESAI`,
   };
 }
@@ -482,20 +482,69 @@ const CORE_16_PROMO_IDS = [
   41271,
 ];
 
-function loadProxiedImage(src: string): Promise<HTMLImageElement | null> {
-  return new Promise((resolve) => {
-    if (!src) {
-      resolve(null);
-      return;
+const loadedImageCache = new Map<string, HTMLImageElement>();
+
+async function loadProxiedImage(
+  src: string,
+  fallbackSrc?: string
+): Promise<HTMLImageElement | null> {
+  const candidates = [src, fallbackSrc]
+    .map((u) => (u || '').trim())
+    .filter(Boolean);
+  if (candidates.length === 0) return null;
+
+  for (const candidate of candidates) {
+    const cached = loadedImageCache.get(candidate);
+    if (cached && cached.complete && cached.naturalWidth > 0) {
+      return cached;
     }
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => resolve(img);
-    img.onerror = () => resolve(null);
-    img.src = src.startsWith('https://abdesai.mu/')
-      ? `/api/proxy-image?url=${encodeURIComponent(src)}`
-      : src;
-  });
+
+    const proxyUrl = getProxiedImageUrl(candidate);
+
+    // 1. Fetch via same-origin proxy as a Blob + ObjectURL so Canvas is 100% immune to CORS taint and browser cache race conditions
+    try {
+      const res = await fetch(proxyUrl);
+      if (res.ok) {
+        const blob = await res.blob();
+        if (blob.size > 0) {
+          const objUrl = URL.createObjectURL(blob);
+          const decodedImg = await new Promise<HTMLImageElement | null>(
+            (resolve) => {
+              const img = new Image();
+              img.onload = () => resolve(img);
+              img.onerror = () => resolve(null);
+              img.src = objUrl;
+            }
+          );
+          if (decodedImg && decodedImg.naturalWidth > 0) {
+            if (typeof decodedImg.decode === 'function') {
+              await decodedImg.decode().catch(() => {});
+            }
+            loadedImageCache.set(candidate, decodedImg);
+            return decodedImg;
+          }
+          URL.revokeObjectURL(objUrl);
+        }
+      }
+    } catch {
+      // Fall through to direct Image load
+    }
+
+    // 2. Fallback direct Image element load with crossOrigin anonymous
+    const directImg = await new Promise<HTMLImageElement | null>((resolve) => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => resolve(img);
+      img.onerror = () => resolve(null);
+      img.src = proxyUrl;
+    });
+    if (directImg && directImg.naturalWidth > 0) {
+      loadedImageCache.set(candidate, directImg);
+      return directImg;
+    }
+  }
+
+  return null;
 }
 
 function drawContainedImage(
@@ -507,14 +556,76 @@ function drawContainedImage(
   boxH: number,
   padding = 12
 ) {
-  const availW = boxW - padding * 2;
-  const availH = boxH - padding * 2;
-  const scale = Math.min(availW / img.width, availH / img.height);
-  const drawW = img.width * scale;
-  const drawH = img.height * scale;
+  const availW = Math.max(10, boxW - padding * 2);
+  const availH = Math.max(10, boxH - padding * 2);
+  const imgW = img.naturalWidth || img.width || 1;
+  const imgH = img.naturalHeight || img.height || 1;
+  const scale = Math.min(availW / imgW, availH / imgH);
+  const drawW = imgW * scale;
+  const drawH = imgH * scale;
   const drawX = boxX + (boxW - drawW) / 2;
   const drawY = boxY + (boxH - drawH) / 2;
   ctx.drawImage(img, drawX, drawY, drawW, drawH);
+}
+
+function drawSuitcaseVectorFallback(
+  ctx: CanvasRenderingContext2D,
+  boxX: number,
+  boxY: number,
+  boxW: number,
+  boxH: number,
+  label: string
+) {
+  ctx.save();
+  const cx = boxX + boxW / 2;
+  const cy = boxY + boxH / 2;
+  const bagW = Math.min(boxW * 0.42, boxH * 0.56);
+  const bagH = bagW * 1.32;
+  const bx = cx - bagW / 2;
+  const by = cy - bagH / 2 + bagH * 0.05;
+
+  // Telescopic handle
+  ctx.strokeStyle = '#0F2942';
+  ctx.lineWidth = Math.max(2, bagW * 0.06);
+  ctx.strokeRect(
+    cx - bagW * 0.18,
+    by - bagH * 0.16,
+    bagW * 0.36,
+    bagH * 0.16
+  );
+
+  // Suitcase shell
+  ctx.fillStyle = '#0F2942';
+  ctx.beginPath();
+  ctx.roundRect(bx, by, bagW, bagH, Math.max(4, bagW * 0.12));
+  ctx.fill();
+
+  // Ribbed grooves
+  ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+  ctx.lineWidth = Math.max(1.5, bagW * 0.035);
+  for (let i = 1; i <= 3; i++) {
+    const ry = by + (bagH / 4) * i;
+    ctx.beginPath();
+    ctx.moveTo(bx + bagW * 0.14, ry);
+    ctx.lineTo(bx + bagW * 0.86, ry);
+    ctx.stroke();
+  }
+
+  // Spinner wheels
+  const wheelR = Math.max(2.5, bagW * 0.07);
+  ctx.fillStyle = '#141413';
+  ctx.beginPath();
+  ctx.arc(bx + bagW * 0.22, by + bagH + wheelR, wheelR, 0, Math.PI * 2);
+  ctx.arc(bx + bagW * 0.78, by + bagH + wheelR, wheelR, 0, Math.PI * 2);
+  ctx.fill();
+
+  if (label) {
+    ctx.fillStyle = '#FFD166';
+    ctx.textAlign = 'center';
+    ctx.font = `800 ${Math.max(10, Math.round(bagW * 0.16))}px "Plus Jakarta Sans", sans-serif`;
+    ctx.fillText(label.slice(0, 12).toUpperCase(), cx, by + bagH * 0.54);
+  }
+  ctx.restore();
 }
 
 // Automatically shrinks font size if a string exceeds maxWidth so big bold fonts never clip or overflow
@@ -771,7 +882,10 @@ async function renderSeriesAllInOneCardToRegion(
       18 * s
     );
 
-    const img = await loadProxiedImage(r.image);
+    const seriesPeerImg = allProducts.find(
+      (p) => p.series === seriesName && p.image && p.image !== r.image
+    )?.image;
+    const img = await loadProxiedImage(r.image, seriesPeerImg);
     if (img) {
       drawContainedImage(
         ctx,
@@ -781,6 +895,15 @@ async function renderSeriesAllInOneCardToRegion(
         sw - 12 * s,
         sh - 110 * s,
         4 * s
+      );
+    } else {
+      drawSuitcaseVectorFallback(
+        ctx,
+        sx + 6 * s,
+        sy + 50 * s,
+        sw - 12 * s,
+        sh - 110 * s,
+        r.shortSize
       );
     }
 
@@ -1072,7 +1195,7 @@ async function renderSeriesAllInOneCardToRegion(
   ctx.fillStyle = '#FFFFFF';
   fillFittedText(
     ctx,
-    '3-YR GLOBAL WARRANTY · abdesai.mu · WhatsApp: +230 5498 8887',
+    '3-YR WARRANTY · abdesai.mu · WhatsApp: +230 5979 7960',
     textCenterX,
     footerY + 88 * s,
     textAvailW - 16 * s,
@@ -1235,10 +1358,16 @@ async function renderVerticalShelfTalkerToRegion(
   ctx.lineWidth = Math.max(2, 3.5 * s);
   ctx.strokeRect(imgBoxX, imgBoxY, imgBoxW, imgBoxH);
 
-  const mainImg = await loadProxiedImage(item.image);
+  const fallbackGalleryImg =
+    item.gallery?.find((g) => g && g !== item.image) ||
+    allProducts.find((p) => p.series === item.series && p.image)?.image;
+  const mainImg = await loadProxiedImage(item.image, fallbackGalleryImg);
 
   if (companion.type !== 'none' && companion.companionImage) {
-    const compImg = await loadProxiedImage(companion.companionImage);
+    const compImg = await loadProxiedImage(
+      companion.companionImage,
+      item.image
+    );
 
     const leftX = imgBoxX + 14 * s;
     const leftY = imgBoxY + 12 * s;
@@ -1259,6 +1388,15 @@ async function renderVerticalShelfTalkerToRegion(
         cardW,
         cardH - 115 * s,
         10 * s
+      );
+    } else {
+      drawSuitcaseVectorFallback(
+        ctx,
+        leftX,
+        leftY + 8 * s,
+        cardW,
+        cardH - 115 * s,
+        specs.sizeClass
       );
     }
 
@@ -1315,6 +1453,15 @@ async function renderVerticalShelfTalkerToRegion(
         cardH - 172 * s,
         10 * s
       );
+    } else {
+      drawSuitcaseVectorFallback(
+        ctx,
+        rightX,
+        leftY + 60 * s,
+        cardW,
+        cardH - 172 * s,
+        'PROMO'
+      );
     }
 
     ctx.fillStyle = '#141413';
@@ -1341,6 +1488,15 @@ async function renderVerticalShelfTalkerToRegion(
       imgBoxW - 40 * s,
       imgBoxH - 20 * s,
       10 * s
+    );
+  } else {
+    drawSuitcaseVectorFallback(
+      ctx,
+      imgBoxX + 20 * s,
+      imgBoxY + 10 * s,
+      imgBoxW - 40 * s,
+      imgBoxH - 20 * s,
+       `${item.series} ${specs.sizeClass}`
     );
   }
 
@@ -1572,7 +1728,7 @@ async function renderVerticalShelfTalkerToRegion(
   ctx.fillStyle = '#FFFFFF';
   fillFittedText(
     ctx,
-    '3-YR GLOBAL WARRANTY · abdesai.mu · WhatsApp: +230 5498 8887',
+    '3-YR WARRANTY · abdesai.mu · WhatsApp: +230 5979 7960',
     textCenterX,
     footerY + 88 * s,
     textAvailW - 16 * s,
@@ -1625,6 +1781,7 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
   >('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [downloadingKey, setDownloadingKey] = useState<string | null>(null);
+  const [isPreparingPrint, setIsPreparingPrint] = useState(false);
 
   // Custom editable overrides per Series Card and per Individual Item Card
   const [seriesOverrides, setSeriesOverrides] = useState<
@@ -1880,6 +2037,55 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
     setSelectedIds((prev) =>
       prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
     );
+  };
+
+  const handlePrintSheets = async () => {
+    setIsPreparingPrint(true);
+    try {
+      const urlsToPreload = new Set<string>();
+      if (talkerStyle === 'series-all-in-one') {
+        for (const sName of selectedSeriesNames) {
+          const lineup = getCompleteSeriesLineup(sName, products);
+          for (const r of lineup.rows.slice(0, 4)) {
+            if (r.image) urlsToPreload.add(r.image);
+          }
+        }
+      } else {
+        for (const item of selectedTalkers) {
+          if (item.image) urlsToPreload.add(item.image);
+          const comp = getPromoCompanionVisual(item, products);
+          if (comp.companionImage) urlsToPreload.add(comp.companionImage);
+        }
+      }
+
+      await Promise.all(
+        Array.from(urlsToPreload).map((url) => loadProxiedImage(url))
+      );
+
+      // Also ensure all DOM <img> elements inside .a4-print-sheet are fully decoded
+      const domImgs = Array.from(
+        document.querySelectorAll<HTMLImageElement>('.a4-print-sheet img')
+      );
+      await Promise.all(
+        domImgs.map(async (img) => {
+          if (!img.complete) {
+            await new Promise<void>((res) => {
+              img.addEventListener('load', () => res(), { once: true });
+              img.addEventListener('error', () => res(), { once: true });
+            });
+          }
+          if (typeof img.decode === 'function') {
+            await img.decode().catch(() => {});
+          }
+        })
+      );
+    } finally {
+      setIsPreparingPrint(false);
+    }
+
+    setTimeout(() => {
+      window.print();
+    }, 60);
   };
 
   const handleDownloadSingleSeriesCard = async (seriesName: string) => {
@@ -2218,6 +2424,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                     alt={`${seriesName} ${r.shortSize}`}
                     series={seriesName}
                     title={`${seriesName} ${r.shortSize}`}
+                    eager
+                    useProxy
                     className={`object-contain ${
                       isFullA4 ? 'max-h-28' : 'max-h-13'
                     }`}
@@ -2369,7 +2577,7 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
               PORT-LOUIS · TRIBECA · TRIANON · BAGATELLE · CASCAVELLE · ROSE-BELLE
             </div>
             <div className="font-mono-tabular font-bold text-white mt-0.5 truncate">
-              3-YR GLOBAL WARRANTY · abdesai.mu · WhatsApp: +230 5498 8887
+              3-YR WARRANTY · abdesai.mu · WhatsApp: +230 5979 7960
             </div>
           </div>
           <TalkerQrCodeBox
@@ -2559,6 +2767,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                       alt={copy.shortTitle}
                       series={item.series}
                       title={copy.shortTitle}
+                      eager
+                      useProxy
                       className={`object-contain ${
                         isFullA4 ? 'max-h-38' : 'max-h-17'
                       }`}
@@ -2606,6 +2816,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                       alt={companion.companionTitle || 'Companion Offer'}
                       series={item.series}
                       title={companion.companionTitle || 'Promo'}
+                      eager
+                      useProxy
                       className={`object-contain ${
                         isFullA4 ? 'max-h-34' : 'max-h-15'
                       }`}
@@ -2635,6 +2847,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                 alt={copy.shortTitle}
                 series={item.series}
                 title={copy.shortTitle}
+                eager
+                useProxy
                 className={`object-contain ${
                   isFullA4 ? 'max-h-52' : 'max-h-26'
                 }`}
@@ -2824,7 +3038,7 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
               PORT-LOUIS · TRIBECA · TRIANON · BAGATELLE · CASCAVELLE · ROSE-BELLE
             </div>
             <div className="font-mono-tabular font-bold text-white mt-0.5 truncate">
-              3-YR GLOBAL WARRANTY · abdesai.mu · WhatsApp: +230 5498 8887
+              3-YR WARRANTY · abdesai.mu · WhatsApp: +230 5979 7960
             </div>
           </div>
           <TalkerQrCodeBox
@@ -2986,8 +3200,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
 
             <button
               type="button"
-              disabled={totalSheetsCount === 0}
-              onClick={() => window.print()}
+              disabled={totalSheetsCount === 0 || isPreparingPrint}
+              onClick={handlePrintSheets}
               className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${
                 totalSheetsCount > 0
                   ? 'bg-[#0F2942] text-white hover:bg-[#091A2B] cursor-pointer'
@@ -2995,7 +3209,11 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
               }`}
             >
               <Printer className="w-4 h-4" />
-              <span>Print {totalSheetsCount} A4 Page(s)</span>
+              <span>
+                {isPreparingPrint
+                  ? 'Loading Photos for Print...'
+                  : `Print ${totalSheetsCount} A4 Page(s)`}
+              </span>
             </button>
 
             <button
@@ -3441,11 +3659,12 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                   </button>
                   <button
                     type="button"
-                    onClick={() => window.print()}
+                    disabled={isPreparingPrint}
+                    onClick={handlePrintSheets}
                     className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-[#0F2942] text-white rounded-md hover:bg-[#091A2B] cursor-pointer"
                   >
                     <Printer className="w-3.5 h-3.5" />
-                    <span>Print Sheet</span>
+                    <span>{isPreparingPrint ? 'Loading...' : 'Print Sheet'}</span>
                   </button>
                 </div>
               </div>
@@ -3491,11 +3710,12 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                   </button>
                   <button
                     type="button"
-                    onClick={() => window.print()}
+                    disabled={isPreparingPrint}
+                    onClick={handlePrintSheets}
                     className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold bg-[#0F2942] text-white rounded-md hover:bg-[#091A2B] cursor-pointer"
                   >
                     <Printer className="w-3.5 h-3.5" />
-                    <span>Print Sheet</span>
+                    <span>{isPreparingPrint ? 'Loading...' : 'Print Sheet'}</span>
                   </button>
                 </div>
               </div>

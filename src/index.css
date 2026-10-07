@@ -38,6 +38,8 @@
     color: #141413 !important;
     margin: 0 !important;
     padding: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
   }
   .no-print {
     display: none !important;
@@ -54,9 +56,21 @@
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
+  .a4-print-sheet:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
   .shelf-talker-card {
     break-inside: avoid;
     page-break-inside: avoid;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .shelf-talker-card img,
+  .a4-print-sheet img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }

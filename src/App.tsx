@@ -613,13 +613,17 @@ export default function App() {
     <div className="min-h-screen flex flex-col bg-[#F9F9F8] text-[#141413]">
       {/* Slim Dismissible Top Promotional Banner (<= 40px) */}
       {!promoDismissed && (
-        <div className="bg-[#141413] text-white px-4 h-9 flex items-center justify-between text-xs">
+        <div
+          className={`bg-[#141413] text-white px-4 h-9 flex items-center justify-between text-xs ${
+            isShelfTalkerOpen || isPriceListOpen ? 'no-print' : ''
+          }`}
+        >
           <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
             <p className="truncate">
               <span>Official A.B. Desai American Tourister Store (abdesai.mu)</span>
               <span className="mx-2 text-white/40" aria-hidden="true">·</span>
               <span className="text-[#D4B886]">
-                Jamaica 3× Medium Rs 11,990 · Jamaica Cabin+XL Rs 9,000 · Skytrac 2nd at 50% Off · Skylette 3-Pc Set Rs 16,990
+                WhatsApp: +230 5979 7960 · Customers Must Confirm Availability Before Payment · Home Deliveries Up to 10 Days
               </span>
             </p>
             <button
@@ -635,7 +639,11 @@ export default function App() {
       )}
 
       {/* Strict 3-Zone Top Bar Contract */}
-      <header className="sticky top-0 z-30 bg-[#F9F9F8]/95 backdrop-blur-xs border-b border-black/8">
+      <header
+        className={`sticky top-0 z-30 bg-[#F9F9F8]/95 backdrop-blur-xs border-b border-black/8 ${
+          isShelfTalkerOpen || isPriceListOpen ? 'no-print' : ''
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
           {/* Zone 1: Single text element wordmark */}
           <a
@@ -756,7 +764,11 @@ export default function App() {
         </div>
       </header>
 
-      <main className="flex-1">
+      <main
+        className={`flex-1 ${
+          isShelfTalkerOpen || isPriceListOpen ? 'no-print' : ''
+        }`}
+      >
         {/* SECTION 1: Storefront Hero featuring Official abdesai.mu Promo Spotlight */}
         <section id="top" className="border-b border-black/8 bg-white">
           <div className="max-w-7xl mx-auto px-6 py-10 lg:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -1399,7 +1411,7 @@ export default function App() {
                 <div className="flex items-center gap-2 text-xs text-[#65645E]">
                   <span>02. Official Mauritian Showrooms & After-Sales</span>
                   <span aria-hidden="true">·</span>
-                  <span>Dandiwalla Co Ltd (A.B. Desai) · Online WhatsApp: +230 5498 8887</span>
+                  <span>Dandiwalla Co Ltd (A.B. Desai) · Online WhatsApp: +230 5979 7960</span>
                 </div>
                 <h2 className="font-display text-3xl font-semibold text-[#141413] mt-1">
                   6 Showrooms Across Mauritius & Direct Contact Numbers
@@ -1491,10 +1503,10 @@ export default function App() {
                 <Truck className="w-5 h-5 text-[#0F2942] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-semibold text-[#141413]">
-                    Free Home Delivery from Rs 3,000
+                    Home Delivery (Up to 10 Days) & Availability Before Payment
                   </h4>
                   <p className="text-[#65645E] mt-0.5 leading-relaxed">
-                    Complimentary home delivery across all nine districts of Mauritius on orders from Rs 3,000, or choose Showroom Click & Collect.
+                    Customers must confirm stock & colour availability on WhatsApp (<strong>+230 5979 7960</strong>) before payment. Free home delivery across Mauritius from Rs 3,000 (home deliveries can take <strong>up to 10 days</strong>), or choose Showroom Click & Collect.
                   </p>
                 </div>
               </div>
@@ -1516,14 +1528,18 @@ export default function App() {
       </main>
 
       {/* SECTION 4: Footer */}
-      <footer className="bg-[#141413] text-white/80 border-t border-black/15">
+      <footer
+        className={`bg-[#141413] text-white/80 border-t border-black/15 ${
+          isShelfTalkerOpen || isPriceListOpen ? 'no-print' : ''
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 text-xs">
           <div className="space-y-1">
             <div className="font-display text-lg font-semibold text-white">
               A.B. Desai Travel — Official American Tourister Store Mauritius
             </div>
             <p className="text-white/60">
-              Operated by Dandiwalla Co Ltd · 9, Corderie Street, Port Louis · Tel: +230 211 4114 · WhatsApp: +230 5498 8887 · info@abdesai.mu
+              Operated by Dandiwalla Co Ltd · 9, Corderie Street, Port Louis · Tel: +230 211 4114 · WhatsApp: +230 5979 7960 · info@abdesai.mu · Please confirm availability before payment · Home deliveries can take up to 10 days
             </p>
           </div>
 
@@ -1759,7 +1775,7 @@ export default function App() {
               target="_blank"
               rel="noopener noreferrer"
               className="py-2 px-2.5 text-xs font-bold bg-[#1B5E3A] hover:bg-[#14492D] text-white rounded-lg cursor-pointer whitespace-nowrap"
-              title="Forward this live change alert to WhatsApp (+230 5498 8887)"
+              title="Forward this live change alert to WhatsApp (+230 5979 7960)"
             >
               WhatsApp Alert
             </a>

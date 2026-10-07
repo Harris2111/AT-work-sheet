@@ -38,7 +38,7 @@ export const SHOWROOMS: ShowroomLocation[] = [
     secondaryPhone: '+230 290 4114 (After Sales)',
     email: 'info@abdesai.mu',
     hours: 'Mon–Fri: 09:30–16:30 · Sat: 09:30–14:00 · Sun & Public Holidays: Closed',
-    note: 'Head Office, Online Service (+230 5498 8887) & Official Warranty Center',
+    note: 'Head Office, Online Service (WhatsApp: +230 5979 7960) & Official Warranty Center',
   },
   {
     id: 'tribeca',

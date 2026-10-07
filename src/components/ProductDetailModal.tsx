@@ -61,10 +61,10 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
     setTimeout(() => setAddedFeedback(false), 1600);
   };
 
-  const whatsappDirectOrderUrl = `https://wa.me/23054988887?text=${encodeURIComponent(
-    `Hello AB Desai Mauritius, I would like to order:\n• ${product.name}\n• SKU: ${product.sku}\n• Price: ${formatRs(
+  const whatsappDirectOrderUrl = `https://wa.me/23059797960?text=${encodeURIComponent(
+    `Hello AB Desai Mauritius, I would like to confirm stock availability & order:\n• ${product.name}\n• SKU: ${product.sku}\n• Price: ${formatRs(
       product.priceRs
-    )}${product.promoBadge ? `\n• Promo: ${product.promoBadge}` : ''}\n• Link: ${product.permalink}`
+    )}${product.promoBadge ? `\n• Promo: ${product.promoBadge}` : ''}\n• Link: ${product.permalink}\n\nPlease confirm availability so I can proceed with payment.`
   )}`;
 
   return (
@@ -305,14 +305,23 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   className="flex items-center justify-center gap-2 px-5 py-3 text-xs font-semibold bg-[#1B5E3A] text-white rounded-lg hover:bg-[#14492D] transition-colors whitespace-nowrap"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Order on WhatsApp (+230 5498 8887)</span>
+                  <span>Confirm & Order on WhatsApp (+230 5979 7960)</span>
                 </a>
+              </div>
+
+              <div className="p-2.5 rounded-lg bg-[#FFFDF7] border border-[#B81D24]/30 text-[11px] text-[#141413] space-y-0.5">
+                <p className="font-semibold text-[#B81D24]">
+                  • Please confirm stock & colour availability on WhatsApp (+230 5979 7960) before payment.
+                </p>
+                <p className="text-[#65645E]">
+                  • Free Home Delivery across Mauritius from Rs 3,000 (home deliveries can take up to 10 days).
+                </p>
               </div>
 
               <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#65645E] pt-1">
                 <span className="inline-flex items-center gap-1">
                   <Truck className="w-3.5 h-3.5 text-[#0F2942]" />
-                  <span>Free Mauritian Delivery from Rs 3,000</span>
+                  <span>Home Delivery: Up to 10 Days (Free from Rs 3,000)</span>
                 </span>
                 <span className="inline-flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#0F2942]" />

@@ -47,6 +47,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
   const [district, setDistrict] = useState('Plaines Wilhems');
   const [selectedShowroom, setSelectedShowroom] = useState(SHOWROOMS[0].name);
   const [paymentMethod, setPaymentMethod] = useState<'juice' | 'cod' | 'card'>('juice');
+  const [availabilityConfirmed, setAvailabilityConfirmed] = useState(false);
   const [confirmedOrderId, setConfirmedOrderId] = useState<string | null>(null);
   const [formError, setFormError] = useState<string | null>(null);
 
@@ -72,6 +73,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       setFormError('Please enter your street delivery address in Mauritius.');
       return;
     }
+    if (!availabilityConfirmed) {
+      setFormError(
+        'Please confirm that you will verify stock & colour availability with A.B. Desai (+230 5979 7960) before making any payment.'
+      );
+      return;
+    }
     setFormError(null);
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     setConfirmedOrderId(`ABD-${randomNum}`);
@@ -79,7 +86,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
   const buildWhatsAppOrderText = () => {
     const lines = [
-      `Hello AB Desai Mauritius (abdesai.mu), I would like to place an American Tourister order:`,
+      `Hello AB Desai Mauritius (abdesai.mu), I would like to confirm stock availability & place an American Tourister order:`,
       confirmedOrderId ? `Order Reference: #${confirmedOrderId}` : null,
       ...items.map(
         (item, idx) =>
@@ -91,22 +98,23 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       `Delivery: ${deliveryFeeRs === 0 ? 'FREE' : formatRs(deliveryFeeRs)} (${
         deliveryMethod === 'pickup'
           ? `Pickup: ${selectedShowroom}`
-          : `${address}, ${district}`
+          : `${address || 'Mauritius'}, ${district} — Home delivery up to 10 days`
       })`,
       `Total Payable: ${formatRs(totalRs)}`,
-      `Payment: ${
+      `Payment Option: ${
         paymentMethod === 'juice'
-          ? 'Juice by MCB'
+          ? 'Juice by MCB (After availability confirmation)'
           : paymentMethod === 'cod'
           ? 'Cash on Delivery'
           : 'Card on Delivery'
       }`,
+      `Note: Please confirm stock & colour availability before I proceed with payment.`,
       `Customer: ${customerName || 'Customer'} (${phone || 'Mauritius'})`,
     ];
     return lines.filter(Boolean).join('\n');
   };
 
-  const whatsappCheckoutUrl = `https://wa.me/23054988887?text=${encodeURIComponent(
+  const whatsappCheckoutUrl = `https://wa.me/23059797960?text=${encodeURIComponent(
     buildWhatsAppOrderText()
   )}`;
 
@@ -141,12 +149,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           </button>
         </div>
 
-        <div className="px-6 py-2.5 bg-[#EFECE6] border-b border-black/6 flex items-center justify-between text-xs">
+        <div className="px-6 py-2.5 bg-[#EFECE6] border-b border-black/6 space-y-1 text-xs">
           <div className="flex items-center gap-2 text-[#141413]">
             <Truck className="w-4 h-4 text-[#0F2942] shrink-0" />
             {subtotalRs >= freeDeliveryThreshold ? (
               <span>
-                You qualify for <strong>Free Home Delivery</strong> across Mauritius!
+                You qualify for <strong>Free Home Delivery</strong> across Mauritius (up to 10 days)!
               </span>
             ) : (
               <span>
@@ -154,9 +162,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <strong className="font-mono-tabular">
                   {formatRs(freeDeliveryThreshold - subtotalRs)}
                 </strong>{' '}
-                more for Free Mauritian Home Delivery (from Rs 3,000)
+                more for Free Mauritian Home Delivery (from Rs 3,000 · takes up to 10 days)
               </span>
             )}
+          </div>
+          <div className="text-[11px] font-semibold text-[#B81D24]">
+            Important: Customers must confirm stock & colour availability on WhatsApp (+230 5979 7960) before payment.
           </div>
         </div>
 
@@ -167,10 +178,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <CheckCircle2 className="w-7 h-7 shrink-0" />
                 <div>
                   <h3 className="text-lg font-semibold text-[#141413]">
-                    Order #{confirmedOrderId} Confirmed — Preparing Shipment
+                    Order #{confirmedOrderId} Registered — Awaiting Availability Confirmation
                   </h3>
                   <p className="text-xs text-[#65645E]">
-                    Official A.B. Desai Mauritius Dispatch & Showroom Reservation
+                    Please confirm stock & colour availability on WhatsApp (+230 5979 7960) before making payment. Home deliveries can take up to 10 days.
                   </p>
                 </div>
               </div>
@@ -206,7 +217,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold bg-[#1B5E3A] text-white rounded-lg hover:bg-[#14492D] transition-colors"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>Send Instant Copy to AB Desai WhatsApp (+230 5498 8887)</span>
+                  <span>Confirm Availability on AB Desai WhatsApp (+230 5979 7960)</span>
                 </a>
                 <button
                   type="button"
@@ -330,7 +341,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                       required
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      placeholder="e.g., 5498 8887"
+                      placeholder="e.g., 5979 7960"
                       className="w-full px-3 py-2 text-xs bg-white border border-black/15 rounded-lg focus:outline-none focus:border-[#0F2942]"
                     />
                   </div>
@@ -350,7 +361,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                           : 'text-[#65645E]'
                       }`}
                     >
-                      Home Delivery (Mauritius)
+                      Home Delivery (Up to 10 Days)
                     </button>
                     <button
                       type="button"
@@ -448,6 +459,32 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                     ))}
                   </div>
                 </div>
+
+                {/* Mandatory Availability & Delivery Timeline Policy Box */}
+                <div className="p-3 rounded-lg bg-[#FFFDF7] border border-[#B81D24]/35 space-y-2">
+                  <div className="text-[11px] font-bold text-[#B81D24] uppercase tracking-wide">
+                    Mandatory Order & Delivery Policy
+                  </div>
+                  <ul className="text-[11px] text-[#141413] space-y-1 list-disc pl-4">
+                    <li>
+                      <strong>Confirm Availability Before Payment:</strong> Customers must confirm stock & colour availability with A.B. Desai on WhatsApp (<strong>+230 5979 7960</strong>) or by phone before proceeding with any payment.
+                    </li>
+                    <li>
+                      <strong>Home Delivery Timeline:</strong> Home deliveries across Mauritius can take <strong>up to 10 days</strong>.
+                    </li>
+                  </ul>
+                  <label className="flex items-start gap-2 pt-1 cursor-pointer select-none">
+                    <input
+                      type="checkbox"
+                      checked={availabilityConfirmed}
+                      onChange={(e) => setAvailabilityConfirmed(e.target.checked)}
+                      className="mt-0.5 rounded border-black/30 text-[#0F2942] focus:ring-[#0F2942]"
+                    />
+                    <span className="text-xs font-semibold text-[#0F2942]">
+                      I understand that I must confirm availability before payment and that home deliveries can take up to 10 days. *
+                    </span>
+                  </label>
+                </div>
               </form>
             </>
           )}
@@ -461,7 +498,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 <span className="font-mono-tabular">{formatRs(subtotalRs)}</span>
               </div>
               <div className="flex justify-between text-[#65645E]">
-                <span>Mauritius Delivery</span>
+                <span>Mauritius Delivery (Up to 10 Days)</span>
                 <span className="font-mono-tabular">
                   {deliveryFeeRs === 0 ? 'FREE' : formatRs(deliveryFeeRs)}
                 </span>
@@ -487,7 +524,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 className="w-full flex items-center justify-center gap-1.5 py-3 px-4 text-xs font-semibold bg-[#1B5E3A] text-white rounded-lg hover:bg-[#14492D] transition-colors whitespace-nowrap"
               >
                 <Share2 className="w-3.5 h-3.5" />
-                <span>Send Bag to WhatsApp</span>
+                <span>Confirm on WhatsApp (+230 5979 7960)</span>
               </a>
             </div>
           </div>

@@ -615,7 +615,7 @@ function injectDynamicOpenGraph(html: string, productSlug?: string): string {
   const title = `${prod.name} — ${priceFormatted} | Shop Now at AB Desai Mauritius`;
   const desc = `${
     prod.promoBadge ? `${prod.promoBadge} · ` : ''
-  }Click to view & order ${prod.name} (${priceFormatted}) with Free Mauritius Delivery from Rs 3,000.`;
+  }Click to view & order ${prod.name} (${priceFormatted}) · WhatsApp +230 5979 7960 (Confirm availability before payment · Home deliveries up to 10 days).`;
   const imgUrl = prod.image || 'https://abdesai.mu/wp-content/uploads/2026/09/Sktrac-Large-offer.webp';
 
   return html
@@ -650,17 +650,35 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  // Image proxy so HTML5 canvas can render high-resolution social CTA cards with abdesai.mu product photos without CORS taint
+  // In-memory LRU-like cache for proxied product images so Shelf Talker & Excel exports are instant and never fail due to upstream rate limits
+  const imageProxyCache = new Map<string, { contentType: string; buffer: Buffer }>();
+
+  // Image proxy so HTML5 canvas & print sheets can render high-resolution cards with abdesai.mu product photos without CORS taint or hotlink blocks
   app.get('/api/proxy-image', async (req, res) => {
     try {
-      const targetUrl = String(req.query.url || '');
-      if (!targetUrl.startsWith('https://abdesai.mu/')) {
+      const rawUrl = String(req.query.url || '').trim();
+      if (!/^https?:\/\/(?:www\.)?abdesai\.mu\//i.test(rawUrl)) {
         res.status(400).send('Invalid image URL');
         return;
       }
+      const targetUrl = rawUrl.replace(/^http:\/\//i, 'https://');
+      const cached = imageProxyCache.get(targetUrl);
+      if (cached) {
+        res.setHeader('Content-Type', cached.contentType);
+        res.setHeader('Cache-Control', 'public, max-age=86400');
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.send(cached.buffer);
+        return;
+      }
+
       const upstream = await fetch(targetUrl, {
+        redirect: 'follow',
         headers: {
-          'User-Agent': 'ABDesai-Social-Card-Generator/1.0',
+          'User-Agent':
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+          Accept:
+            'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+          Referer: 'https://abdesai.mu/',
         },
       });
       if (!upstream.ok) {
@@ -669,10 +687,18 @@ async function startServer() {
       }
       const contentType = upstream.headers.get('content-type') || 'image/webp';
       const arrayBuffer = await upstream.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+
+      if (imageProxyCache.size > 300) {
+        const oldestKey = imageProxyCache.keys().next().value;
+        if (oldestKey) imageProxyCache.delete(oldestKey);
+      }
+      imageProxyCache.set(targetUrl, { contentType, buffer });
+
       res.setHeader('Content-Type', contentType);
       res.setHeader('Cache-Control', 'public, max-age=86400');
       res.setHeader('Access-Control-Allow-Origin', '*');
-      res.send(Buffer.from(arrayBuffer));
+      res.send(buffer);
     } catch {
       res.status(500).send('Image proxy failed');
     }

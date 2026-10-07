@@ -15,6 +15,7 @@ import {
   BellRing,
 } from 'lucide-react';
 import { AbDesaiATProduct, formatRs } from '../data/luggageCatalog';
+import { getProxiedImageUrl } from './ProductImage';
 import {
   getProductSpecifications,
   getExactSizeClass,
@@ -73,10 +74,11 @@ function buildPriceListWhatsAppUrl(
       : null,
     `-----------------------------------------`,
     `Showrooms: Port-Louis · Tribeca · Trianon · Bagatelle · Cascavelle · Rose-Belle`,
-    `Online: https://abdesai.mu | WhatsApp: +230 5498 8887`,
+    `Important: Customers must confirm availability before payment · Home deliveries can take up to 10 days`,
+    `Online: https://abdesai.mu | WhatsApp: +230 5979 7960`,
   ].filter(Boolean);
 
-  return `https://wa.me/23054988887?text=${encodeURIComponent(
+  return `https://wa.me/23059797960?text=${encodeURIComponent(
     lines.join('\n')
   )}`;
 }
@@ -199,9 +201,7 @@ function getSeriesSortRank(series: string): number {
  */
 async function renderProductPhotoPngBase64(imageUrl: string): Promise<string | null> {
   if (!imageUrl || !imageUrl.trim()) return null;
-  const proxiedSrc = imageUrl.startsWith('https://abdesai.mu/')
-    ? `/api/proxy-image?url=${encodeURIComponent(imageUrl)}`
-    : imageUrl;
+  const proxiedSrc = getProxiedImageUrl(imageUrl);
 
   return new Promise((resolve) => {
     const img = new Image();
@@ -445,7 +445,7 @@ export const PriceListModal: React.FC<PriceListModalProps> = ({
       const subRow = sheet.getRow(2);
       subRow.height = 20;
       const subCell = sheet.getCell('A2');
-      subCell.value = `Port-Louis (211 4114) · Tribeca Mall (5466 4114) · La City Trianon (463 7591) · Bagatelle Mall (471 1000) · Cascavelle Mall (452 4142) · Rose-Belle (5461 2224) · WhatsApp (+230 5498 8887) · Total Listed: ${filteredList.length} Items`;
+      subCell.value = `Port-Louis (211 4114) · Tribeca Mall (5466 4114) · La City Trianon (463 7591) · Bagatelle Mall (471 1000) · Cascavelle Mall (452 4142) · Rose-Belle (5461 2224) · WhatsApp (+230 5979 7960) · Confirm Availability Before Payment · Home Deliveries Up to 10 Days · Total Listed: ${filteredList.length} Items`;
       subCell.font = {
         name: 'Calibri',
         size: 10,
@@ -842,7 +842,7 @@ export const PriceListModal: React.FC<PriceListModalProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold bg-[#1B5E3A] text-white rounded-lg hover:bg-[#14492D] transition-colors cursor-pointer whitespace-nowrap"
-              title="Forward the currently filtered Price List to WhatsApp (+230 5498 8887) or Showroom Managers"
+              title="Forward the currently filtered Price List to WhatsApp (+230 5979 7960) or Showroom Managers"
             >
               <MessageCircle className="w-3.5 h-3.5" />
               <span>WhatsApp Price List</span>
@@ -1029,7 +1029,7 @@ export const PriceListModal: React.FC<PriceListModalProps> = ({
               A.B. DESAI MAURITIUS — AMERICAN TOURISTER OFFICIAL PRICE LIST & PROMOTIONS
             </h1>
             <p className="text-xs text-[#65645E]">
-              Port-Louis (211 4114) · Tribeca Mall (5466 4114) · La City Trianon (463 7591) · Bagatelle Mall (471 1000) · Cascavelle Mall (452 4142) · Rose-Belle (5461 2224) · Online WhatsApp (+230 5498 8887)
+              Port-Louis (211 4114) · Tribeca Mall (5466 4114) · La City Trianon (463 7591) · Bagatelle Mall (471 1000) · Cascavelle Mall (452 4142) · Rose-Belle (5461 2224) · Online WhatsApp (+230 5979 7960) · Customers must confirm availability before payment · Home deliveries can take up to 10 days
             </p>
           </div>
           <div className="text-right text-xs font-mono-tabular text-[#141413]">
