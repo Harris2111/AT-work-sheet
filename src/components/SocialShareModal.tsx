@@ -11,7 +11,7 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 import { AbDesaiATProduct, formatRs } from '../data/luggageCatalog';
-import { ProductImage, getProxiedImageUrl } from './ProductImage';
+import { ProductImage, loadCorsSafeCanvasImage } from './ProductImage';
 
 interface SocialShareModalProps {
   isOpen: boolean;
@@ -114,30 +114,24 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
     ctx.fillText('abdesai.mu', width - 48, 60);
     ctx.textAlign = 'left';
 
-    // 3. Load Product Image via CORS-safe proxy
-    const proxyUrl = getProxiedImageUrl(previewImg);
+    // 3. Load Product Image via CORS-safe loader (works in both dev server and static deployed app)
     const imgAreaTop = 110;
     const imgAreaHeight = aspect === 'story' ? 1050 : 540;
 
-    try {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      await new Promise<void>((resolve, reject) => {
-        img.onload = () => resolve();
-        img.onerror = () => reject(new Error('Image load error'));
-        img.src = proxyUrl;
-      });
-
+    const img = await loadCorsSafeCanvasImage(previewImg);
+    if (img) {
       const pad = 40;
       const maxW = width - pad * 2;
       const maxH = imgAreaHeight - pad * 2;
-      const scale = Math.min(maxW / img.width, maxH / img.height);
-      const drawW = img.width * scale;
-      const drawH = img.height * scale;
+      const imgW = img.naturalWidth || img.width || 1;
+      const imgH = img.naturalHeight || img.height || 1;
+      const scale = Math.min(maxW / imgW, maxH / imgH);
+      const drawW = imgW * scale;
+      const drawH = imgH * scale;
       const drawX = (width - drawW) / 2;
       const drawY = imgAreaTop + (imgAreaHeight - drawH) / 2;
       ctx.drawImage(img, drawX, drawY, drawW, drawH);
-    } catch {
+    } else {
       ctx.fillStyle = '#F4F2ED';
       ctx.fillRect(60, imgAreaTop + 20, width - 120, imgAreaHeight - 40);
     }

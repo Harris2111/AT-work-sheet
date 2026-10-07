@@ -15,7 +15,7 @@ import {
   BellRing,
 } from 'lucide-react';
 import { AbDesaiATProduct, formatRs } from '../data/luggageCatalog';
-import { getProxiedImageUrl } from './ProductImage';
+import { loadCorsSafeCanvasImage } from './ProductImage';
 import {
   getProductSpecifications,
   getExactSizeClass,
@@ -201,46 +201,37 @@ function getSeriesSortRank(series: string): number {
  */
 async function renderProductPhotoPngBase64(imageUrl: string): Promise<string | null> {
   if (!imageUrl || !imageUrl.trim()) return null;
-  const proxiedSrc = getProxiedImageUrl(imageUrl);
+  const img = await loadCorsSafeCanvasImage(imageUrl);
+  if (!img) return null;
 
-  return new Promise((resolve) => {
-    const img = new Image();
-    img.crossOrigin = 'anonymous';
-    img.onload = () => {
-      try {
-        const size = 140;
-        const canvas = document.createElement('canvas');
-        canvas.width = size;
-        canvas.height = size;
-        const ctx = canvas.getContext('2d');
-        if (!ctx) {
-          resolve(null);
-          return;
-        }
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, size, size);
+  try {
+    const size = 140;
+    const canvas = document.createElement('canvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
 
-        const pad = 8;
-        const maxW = size - pad * 2;
-        const maxH = size - pad * 2;
-        const scale = Math.min(
-          maxW / (img.naturalWidth || 1),
-          maxH / (img.naturalHeight || 1)
-        );
-        const drawW = (img.naturalWidth || size) * scale;
-        const drawH = (img.naturalHeight || size) * scale;
-        const drawX = (size - drawW) / 2;
-        const drawY = (size - drawH) / 2;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, size, size);
 
-        ctx.drawImage(img, drawX, drawY, drawW, drawH);
-        resolve(canvas.toDataURL('image/png'));
-      } catch {
-        resolve(null);
-      }
-    };
-    img.onerror = () => resolve(null);
-    img.src = proxiedSrc;
-  });
+    const pad = 8;
+    const maxW = size - pad * 2;
+    const maxH = size - pad * 2;
+    const scale = Math.min(
+      maxW / (img.naturalWidth || 1),
+      maxH / (img.naturalHeight || 1)
+    );
+    const drawW = (img.naturalWidth || size) * scale;
+    const drawH = (img.naturalHeight || size) * scale;
+    const drawX = (size - drawW) / 2;
+    const drawY = (size - drawH) / 2;
+
+    ctx.drawImage(img, drawX, drawY, drawW, drawH);
+    return canvas.toDataURL('image/png');
+  } catch {
+    return null;
+  }
 }
 
 export const PriceListModal: React.FC<PriceListModalProps> = ({

@@ -29,7 +29,10 @@ import {
   getCompleteSeriesLineup,
   CompleteSeriesLineup,
 } from '../data/productSpecs';
-import { ProductImage, getProxiedImageUrl } from './ProductImage';
+import {
+  ProductImage,
+  loadCorsSafeCanvasImage,
+} from './ProductImage';
 
 interface ShelfTalkerStudioModalProps {
   isOpen: boolean;
@@ -482,69 +485,11 @@ const CORE_16_PROMO_IDS = [
   41271,
 ];
 
-const loadedImageCache = new Map<string, HTMLImageElement>();
-
 async function loadProxiedImage(
   src: string,
   fallbackSrc?: string
 ): Promise<HTMLImageElement | null> {
-  const candidates = [src, fallbackSrc]
-    .map((u) => (u || '').trim())
-    .filter(Boolean);
-  if (candidates.length === 0) return null;
-
-  for (const candidate of candidates) {
-    const cached = loadedImageCache.get(candidate);
-    if (cached && cached.complete && cached.naturalWidth > 0) {
-      return cached;
-    }
-
-    const proxyUrl = getProxiedImageUrl(candidate);
-
-    // 1. Fetch via same-origin proxy as a Blob + ObjectURL so Canvas is 100% immune to CORS taint and browser cache race conditions
-    try {
-      const res = await fetch(proxyUrl);
-      if (res.ok) {
-        const blob = await res.blob();
-        if (blob.size > 0) {
-          const objUrl = URL.createObjectURL(blob);
-          const decodedImg = await new Promise<HTMLImageElement | null>(
-            (resolve) => {
-              const img = new Image();
-              img.onload = () => resolve(img);
-              img.onerror = () => resolve(null);
-              img.src = objUrl;
-            }
-          );
-          if (decodedImg && decodedImg.naturalWidth > 0) {
-            if (typeof decodedImg.decode === 'function') {
-              await decodedImg.decode().catch(() => {});
-            }
-            loadedImageCache.set(candidate, decodedImg);
-            return decodedImg;
-          }
-          URL.revokeObjectURL(objUrl);
-        }
-      }
-    } catch {
-      // Fall through to direct Image load
-    }
-
-    // 2. Fallback direct Image element load with crossOrigin anonymous
-    const directImg = await new Promise<HTMLImageElement | null>((resolve) => {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = () => resolve(img);
-      img.onerror = () => resolve(null);
-      img.src = proxyUrl;
-    });
-    if (directImg && directImg.naturalWidth > 0) {
-      loadedImageCache.set(candidate, directImg);
-      return directImg;
-    }
-  }
-
-  return null;
+  return loadCorsSafeCanvasImage(src, fallbackSrc);
 }
 
 function drawContainedImage(
