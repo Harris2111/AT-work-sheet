@@ -18,8 +18,10 @@ import {
   FileSpreadsheet,
   Pencil,
   RotateCcw,
+  Move,
 } from 'lucide-react';
 import { AbDesaiATProduct, formatRs } from '../data/luggageCatalog';
+import { CustomTemplateBuilder } from './CustomTemplateBuilder';
 import {
   getProductSpecifications,
   getExactSizeClass,
@@ -1706,8 +1708,12 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
   onOpenPriceList,
 }) => {
   const [talkerStyle, setTalkerStyle] = useState<
-    'series-all-in-one' | 'per-item-specs' | 'promos-only'
+    'series-all-in-one' | 'per-item-specs' | 'promos-only' | 'custom-builder'
   >('series-all-in-one');
+  const [customBuilderInit, setCustomBuilderInit] = useState<{
+    series?: string;
+    productId?: number | null;
+  }>({ series: 'Bricklane', productId: null });
   // Default to 'a4-single' when viewing All-in-One Series so the whole series fills the entire page with big text, and user can toggle 4xA6 anytime
   const [layoutMode, setLayoutMode] = useState<'a6-4up' | 'a4-single'>(
     'a6-4up'
@@ -2253,6 +2259,18 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
         <div className="no-print absolute top-2 right-2 z-10 flex items-center gap-1">
           <button
             type="button"
+            onClick={() => {
+              setCustomBuilderInit({ series: seriesName, productId: null });
+              setTalkerStyle('custom-builder');
+            }}
+            className="inline-flex items-center gap-1 px-2.5 py-1 text-[10px] font-semibold bg-[#0F2942] text-[#FFD166] border border-black/30 rounded shadow-xs hover:bg-[#163a5c] cursor-pointer"
+            title="Open this series in the Freeform Drag & Resize Template Studio to adjust image/text size & placement"
+          >
+            <Move className="w-3 h-3" />
+            <span>Adjust Layout & Size</span>
+          </button>
+          <button
+            type="button"
             onClick={() => setEditingTarget({ mode: 'series', seriesName })}
             className={`inline-flex items-center gap-1 px-2.5 py-1 text-[10px] font-semibold rounded border shadow-xs cursor-pointer ${
               hasCustomEdits
@@ -2618,6 +2636,21 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
         className="shelf-talker-card relative bg-white border-[3px] border-[#141413] flex flex-col justify-between overflow-hidden h-full"
       >
         <div className="no-print absolute top-2 right-2 z-10 flex items-center gap-1">
+          <button
+            type="button"
+            onClick={() => {
+              setCustomBuilderInit({
+                series: rawItem.series,
+                productId: rawItem.id,
+              });
+              setTalkerStyle('custom-builder');
+            }}
+            className="inline-flex items-center gap-1 px-2.5 py-1 text-[10px] font-semibold bg-[#0F2942] text-[#FFD166] border border-black/30 rounded shadow-xs hover:bg-[#163a5c] cursor-pointer"
+            title="Open this suitcase card in the Freeform Drag & Resize Template Studio to adjust image/text size & placement"
+          >
+            <Move className="w-3 h-3" />
+            <span>Adjust Layout & Size</span>
+          </button>
           <button
             type="button"
             onClick={() =>
@@ -3088,6 +3121,18 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Promo Talkers</span>
               </button>
+              <button
+                type="button"
+                onClick={() => setTalkerStyle('custom-builder')}
+                className={`inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-md transition-colors cursor-pointer whitespace-nowrap ${
+                  talkerStyle === 'custom-builder'
+                    ? 'bg-[#1B5E3A] text-white shadow-2xs'
+                    : 'text-[#1B5E3A] bg-[#1B5E3A]/10 hover:bg-[#1B5E3A]/20'
+                }`}
+              >
+                <Move className="w-3.5 h-3.5" />
+                <span>Custom Drag & Resize Template</span>
+              </button>
             </div>
 
             {/* Orientation / Size Mode Toggle */}
@@ -3173,7 +3218,8 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
         </div>
 
         {/* SELECTOR PANEL FOR MODE 1: WHOLE SERIES ON 1 CARD */}
-        {talkerStyle === 'series-all-in-one' ? (
+        {talkerStyle === 'custom-builder' ? null : talkerStyle ===
+          'series-all-in-one' ? (
           <div className="max-w-7xl mx-auto mt-3 pt-2.5 border-t border-black/8 space-y-2.5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="text-xs font-semibold text-[#141413]">
@@ -3540,7 +3586,13 @@ export const ShelfTalkerStudioModal: React.FC<ShelfTalkerStudioModalProps> = ({
 
       {/* Printable A4 Portrait Sheets Preview Area */}
       <div className="py-8 px-4 print:p-0 flex flex-col items-center gap-8 print:gap-0">
-        {totalSheetsCount === 0 ? (
+        {talkerStyle === 'custom-builder' ? (
+          <CustomTemplateBuilder
+            products={products}
+            initialSeries={customBuilderInit.series || 'Bricklane'}
+            initialProductId={customBuilderInit.productId}
+          />
+        ) : totalSheetsCount === 0 ? (
           <div className="no-print bg-white border border-black/10 rounded-xl p-12 text-center space-y-3 max-w-lg">
             <p className="text-base font-semibold text-[#141413]">
               No shelf talkers selected yet.
