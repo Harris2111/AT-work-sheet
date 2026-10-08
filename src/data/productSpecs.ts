@@ -487,23 +487,23 @@ const SERIES_SPECS_DB: Record<string, SeriesSizeTable> = {
     material: 'Textured Hard-Side ABS / Polycarbonate Shell',
     wheels: '360° Smooth Spinner Wheels',
     lock: 'Recessed 3-Dial Combination Lock',
+    Cabin: {
+      dim: '55 × 36 × 24 cm',
+      vol: '36 L',
+      wt: '2.8 kg',
+      badge: 'CABIN SIZE (55CM)',
+    },
     Medium: {
       dim: '69 × 47 × 31/34 cm (Exp)',
-      vol: '77 / 85 L (×2 Units)',
-      wt: '4.0 kg each',
-      badge: 'MEDIUM BOGO (2×69CM)',
+      vol: '77 / 85 L (Exp)',
+      wt: '4.0 kg',
+      badge: 'MEDIUM SIZE (69CM)',
     },
     Large: {
       dim: '79 × 53 × 35/38 cm (Exp)',
-      vol: '125 / 136 L (×2 Units)',
-      wt: '4.9 kg each',
-      badge: 'LARGE BOGO (2×79CM)',
-    },
-    'Combo / 2-Pack': {
-      dim: '69cm Medium or 79cm Large (×2)',
-      vol: '77–85L or 125–136L each',
-      wt: '4.0 kg / 4.9 kg each',
-      badge: '2-UNIT BOGO PACK',
+      vol: '125 / 136 L (Exp)',
+      wt: '4.9 kg',
+      badge: 'LARGE SIZE (79CM)',
     },
   },
   Ellipso: {
@@ -1114,6 +1114,7 @@ export const ALL_DISPLAY_SERIES_ORDER = [
   'Jamaica',
   'Dashway',
   'Duncan',
+  'Senna',
   'Gemina Pro',
   'Novastream',
   'Skylette',
@@ -1173,7 +1174,7 @@ export function getCompleteSeriesLineup(
 
   const seriesFallbackImg =
     fallbackProducts.find((p) => p.image && p.image.trim().length > 0)?.image ||
-    'https://abdesai.mu/wp-content/uploads/2026/10/Senna-generic.webp';
+    'https://abdesai.mu/wp-content/uploads/2024/11/Senna-med-blue-main.jpg';
 
   const rows: SeriesSizeRow[] = [];
   for (const sc of sizeOrder) {
@@ -1238,8 +1239,8 @@ export function getCompleteSeriesLineup(
       promoNote = '+FREE Travel Rice Cooker';
     } else if (seriesName === 'Aerospin' && sc === 'X-Large') {
       promoNote = '+FREE Baseus Powerbank (Stone Basalt)';
-    } else if (seriesName === 'Senna') {
-      promoNote = 'BUY 1 GET 1 FREE (2 FOR Rs 7,500)';
+    } else if (seriesName === 'Senna' && rep.hasPromo) {
+      promoNote = rep.promoBadge;
     } else if (
       seriesName === 'Jamaica' &&
       sc === 'Set of 3' &&
@@ -1359,8 +1360,8 @@ export function getCompleteSeriesLineup(
     heroPromoBanner = `3-PC SET SPECIAL OFFER RS 14,990 (SAVE RS 2,010)!`;
     bottomPromoCallout = `COMPLETE 3-PC SET (CABIN + MEDIUM + LARGE) FOR ONLY RS 14,990!`;
   } else if (seriesName === 'Senna') {
-    heroPromoBanner = `BUY 1 GET 1 FREE — 2 SUITCASES FOR PRICE OF 1!`;
-    bottomPromoCallout = `BUY 1 MEDIUM AT RS 7,500 → GET 2ND MEDIUM FREE (2 UNITS FOR RS 7,500)!`;
+    heroPromoBanner = `EXPANDABLE HARD-SIDE MEDIUM (69CM · 77–85L)!`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Dash Pop') {
     heroPromoBanner = `EUROPEAN EXPANDABLE PP · CABIN+MED RS 15,990!`;
     bottomPromoCallout = `100% POLYPROPYLENE · EXPANDABLE IN ALL SIZES · DOUBLE WHEELS`;

@@ -90,10 +90,13 @@ function detectSeries(name: string, tags: any[]): string {
   return 'American Tourister';
 }
 
-function detectSizeCategory(name: string): string {
+function detectSizeCategory(name: string, onSale = true): string {
   const n = name.toLowerCase();
   if (/set\s*of\s*3|set\s*3|set3|\b3\s*pcs\b|\b3\s*units\b/i.test(n)) return 'Set of 3';
-  if (/cabin\s*\+\s*large|cabin\s*\+\s*medium|2\s*units|buy\s*one|offer/i.test(n))
+  if (
+    (/cabin\s*\+\s*large|cabin\s*\+\s*medium|get\s+the\s+second\s+one/i.test(n)) ||
+    (onSale && /2\s*units|buy\s*one|offer/i.test(n))
+  )
     return 'Combo / 2-Pack';
   if (/xlarge|x-large|\bxl\b|80cm|79cm|78cm|77cm|\blarge\b|\s+l\s+/i.test(n))
     return 'Large / X-Large';
@@ -101,6 +104,16 @@ function detectSizeCategory(name: string): string {
   if (/cabin|55cm|56cm|57cm|\s+c\s+/i.test(n)) return 'Cabin';
   if (/backpack|duffle|dbag|briefcase|tote/i.test(n)) return 'Backpack & Duffle';
   return 'Individual Suitcase';
+}
+
+function cleanExpiredPromoTitle(rawName: string, onSale: boolean): string {
+  if (!onSale && /buy\s*one\s*get\s*one\s*free/i.test(rawName)) {
+    return rawName
+      .replace(/\s*Rs\s*\d+\s*each\s*[–—-]\s*Buy\s*One\s*Get\s*One\s*Free[\s\S]*$/i, '')
+      .replace(/\s*[–—-]\s*Buy\s*One\s*Get\s*One\s*Free[\s\S]*$/i, '')
+      .trim();
+  }
+  return rawName;
 }
 
 function resolvePriceAndPromo(p: any, name: string, rawDesc = '') {
@@ -120,8 +133,14 @@ function resolvePriceAndPromo(p: any, name: string, rawDesc = '') {
         promoBadge: 'Buy One Get One Free (Price for 2 Units)',
       };
     }
+    const eachMatch = name.match(/Rs\s*([\d,]+)\s*each/i);
+    const singleUnitPrice = eachMatch
+      ? Number(eachMatch[1].replace(/,/g, ''))
+      : rawSaleRs > 0
+      ? rawSaleRs
+      : rawPriceRs;
     return {
-      priceRs: rawPriceRs,
+      priceRs: singleUnitPrice,
       regularPriceRs: undefined,
       onSale: false,
       hasPromo: false,
@@ -513,22 +532,16 @@ async function fetchLiveAbDesaiCatalog() {
     if (data.length < 100) break;
   }
 
-  // Filter out expired BOGO promo-only listings where WooCommerce on_sale has been turned off (e.g. Senna BOGO 55950)
-  const all = Array.from(byId.values()).filter((p) => {
-    const rawName = decodeEntities(p.name || '');
-    if (/buy\s*one\s*get\s*one\s*free/i.test(rawName) && !p.on_sale) {
-      return false;
-    }
-    return true;
-  });
+  const all = Array.from(byId.values());
   if (all.length === 0) {
     throw new Error('Empty response from abdesai.mu WooCommerce API');
   }
 
   const normalized = all.map((p) => {
-    const name = decodeEntities(p.name);
-    const series = detectSeries(name, p.tags);
-    const sizeCategory = detectSizeCategory(name);
+    const rawName = decodeEntities(p.name);
+    const name = cleanExpiredPromoTitle(rawName, Boolean(p.on_sale));
+    const series = detectSeries(rawName, p.tags);
+    const sizeCategory = detectSizeCategory(rawName, Boolean(p.on_sale));
 
     const rawDesc = decodeEntities(
       `${p.description || ''} ${p.short_description || ''}`
@@ -541,7 +554,7 @@ async function fetchLiveAbDesaiCatalog() {
       .trim();
 
     const { priceRs, regularPriceRs, onSale, hasPromo, promoBadge } =
-      resolvePriceAndPromo(p, name, rawDesc);
+      resolvePriceAndPromo(p, rawName, rawDesc);
 
     const initialMatch = INITIAL_ABDESAI_PRODUCTS.find((ip) => ip.id === p.id);
     const seriesPeerMatch = INITIAL_ABDESAI_PRODUCTS.find(
@@ -551,7 +564,7 @@ async function fetchLiveAbDesaiCatalog() {
       p.images?.[0]?.src ||
       initialMatch?.image ||
       seriesPeerMatch?.image ||
-      'https://abdesai.mu/wp-content/uploads/2026/10/Senna-generic.webp';
+      'https://abdesai.mu/wp-content/uploads/2024/11/Senna-med-blue-main.jpg';
     const rawGallery = (p.images || []).map((i: any) => i.src).filter(Boolean);
 
     return {

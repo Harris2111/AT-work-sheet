@@ -4115,6 +4115,27 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATB228-BRICKLANE-55-BLACK-3.webp"
     ],
     "specsText": "The interesting play with groove and rectangular pattern gives a strong identity to BRICKLANE. The boxy silhouette offers more volume and allows you to BRING BACK MORE! You can also find fundamentals in this suitcase and multiple compartments, plus smooth double wheels will give you easier movement. Sturdy and light weight construction Extra packing space to accommodate your last-minute shopping Fixed 3-Digit Combination Lock for extra security Warranty: Limited 3 year global warranty Cabin: 55cm X 36cm X 24cm Vol:35L / 3.1Kg Warranty 3 years Limited Global Warranty"
+  },
+  {
+    "id": 55950,
+    "name": "AMERICAN TOURISTER Senna Medium (69cm) As Per Colour Available",
+    "slug": "senna-medium",
+    "sku": "Senna M As per colour available",
+    "series": "Senna",
+    "sizeCategory": "Medium",
+    "priceRs": 7500,
+    "onSale": false,
+    "hasPromo": false,
+    "inStock": true,
+    "permalink": "https://abdesai.mu/product/senna-medium/",
+    "image": "https://abdesai.mu/wp-content/uploads/2024/11/Senna-med-blue-main.jpg",
+    "gallery": [
+      "https://abdesai.mu/wp-content/uploads/2024/11/Senna-med-blue-main.jpg",
+      "https://abdesai.mu/wp-content/uploads/2024/11/Senna-Generic.jpg",
+      "https://abdesai.mu/wp-content/uploads/2024/11/Senna-Set3-Blue-main.jpg",
+      "https://abdesai.mu/wp-content/uploads/2024/11/Senna-Set3-SilGr-main.jpg"
+    ],
+    "specsText": "Medium Size: 69x47x31cm Expandable to 34cm Volume/Weight: 77L-85L / 4.0Kg Warranty : 3 years Global warranty in more than 120 countries"
   }
 ];
 

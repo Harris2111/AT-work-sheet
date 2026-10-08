@@ -109,6 +109,7 @@ const POPULAR_SERIES = [
   'Dash Pop',
   'Duncan',
   'Bricklane',
+  'Senna',
   'Novastream',
   'Gemina Pro',
   'Mystic',
@@ -746,10 +747,12 @@ export default function App() {
                 setShareProduct(null);
                 setIsShareOpen(true);
               }}
-              className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-2 text-xs font-semibold text-[#141413] bg-white border border-black/15 rounded-lg hover:bg-[#EFECE6] transition-colors cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-2.5 py-2 text-xs font-semibold text-white bg-[#1B5E3A] rounded-lg hover:bg-[#14492D] transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
+              title="Generate 9:16 WhatsApp Status Posters & Share Store Link"
             >
-              <Share2 className="w-3.5 h-3.5 text-[#0F2942]" />
-              <span>Share Store</span>
+              <Share2 className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">WhatsApp Status / Share</span>
+              <span className="sm:hidden">Status</span>
             </button>
 
             <button
@@ -837,13 +840,13 @@ export default function App() {
                 <button
                   type="button"
                   onClick={() => {
-                    setShareProduct(currentHeroProduct);
+                    setShareProduct(null);
                     setIsShareOpen(true);
                   }}
-                  className="inline-flex items-center gap-2 px-4 py-3 text-xs font-semibold text-[#141413] bg-white border border-black/15 hover:bg-[#EFECE6] rounded-lg transition-colors cursor-pointer whitespace-nowrap"
+                  className="inline-flex items-center gap-2 px-4 py-3 text-xs font-semibold text-white bg-[#1B5E3A] hover:bg-[#14492D] rounded-lg transition-colors cursor-pointer whitespace-nowrap shadow-2xs"
                 >
-                  <Share2 className="w-3.5 h-3.5 text-[#0F2942]" />
-                  <span>Share Promo Card</span>
+                  <Share2 className="w-3.5 h-3.5" />
+                  <span>WhatsApp Status Poster</span>
                 </button>
               </div>
 
