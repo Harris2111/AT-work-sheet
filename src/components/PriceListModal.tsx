@@ -944,7 +944,6 @@ export const PriceListModal: React.FC<PriceListModalProps> = ({
                 <option value="Large">Large Size Only (77–80cm)</option>
                 <option value="X-Large">X-Large Size Only (79–82cm)</option>
                 <option value="Set of 3">Set of 3 Only</option>
-                <option value="Combo / 2-Pack">2-Pack / BOGO Combos Only</option>
                 <option value="Backpack & Duffle">Backpacks & Duffles Only</option>
               </select>
 

@@ -34,7 +34,7 @@ interface SocialShareModalProps {
 type CardAspect = 'story' | 'square';
 type StatusTemplateMode = 'store-showcase' | 'series-lineup' | 'single-product';
 
-const TOP_SHOWCASE_IDS = [56981, 56513, 47808, 41100];
+const TOP_SHOWCASE_IDS = [48101, 50396, 55858, 55872];
 
 export const SocialShareModal: React.FC<SocialShareModalProps> = ({
   isOpen,
@@ -70,8 +70,8 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
 
   const activeProduct =
     product ||
-    allProducts.find((p) => p.id === 56981) ||
-    allProducts.find((p) => p.id === 56583) ||
+    allProducts.find((p) => p.id === 48101) ||
+    allProducts.find((p) => p.id === 50396) ||
     allProducts[0];
 
   const showcaseProducts = TOP_SHOWCASE_IDS.map((id) =>

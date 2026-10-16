@@ -318,31 +318,7 @@ function buildHighImpactRetailCopy(
     };
   }
 
-  if (item.series === 'Jamaica' && /medium\s*3\s*pcs|3\s*medium/i.test(n)) {
-    return {
-      shortTitle: 'Jamaica Set of 3 Medium (3 × 69cm)',
-      hookHeadline: 'SET OF 3 MEDIUM SUITCASES — ONLY RS 11,990!',
-      bullets: [
-        'Get 3 × Medium 69cm Expandable Suitcases (78/85L Each = 255L Total)!',
-        `${specs.material} · ${specs.wheels} · ${specs.lock}`,
-      ],
-      saveBannerText: 'YOU SAVE RS 5,980 ON 3 MEDIUMS!',
-      urgencySubtext: 'ALL 3 MEDIUM SUITCASES FOR RS 11,990 (WAS RS 17,970 · ONLY RS 3,997 EACH)!',
-    };
-  }
 
-  if (item.series === 'Jamaica' && /cabin\s*\+\s*large/i.test(n)) {
-    return {
-      shortTitle,
-      hookHeadline: 'UNBEATABLE CABIN + X-LARGE COMBO DEAL!',
-      bullets: [
-        `Get BOTH Cabin 57cm (Rs 4,800) + X-Large 80cm (Rs 7,500) Together!`,
-        `${specs.material} · ${specs.wheels} · ${specs.lock}`,
-      ],
-      saveBannerText: `YOU SAVE RS 3,300 INSTANTLY!`,
-      urgencySubtext: `BOTH SUITCASES FOR ONLY RS 9,000 (WAS RS 12,300)!`,
-    };
-  }
 
   if (item.series === 'Skylette' && /set/i.test(n)) {
     return {
@@ -417,29 +393,29 @@ const DEFAULT_BRICKLANE_SERIES_IDS = [
 ];
 
 const DEFAULT_FOUR_PROMO_A6_IDS = [
-  56981,
-  56513,
-  47808,
-  55861,
+  48101, // Skytrac Set of 3 Sunshine Yellow (Rs 15,990 · Save Rs 4,510)
+  50396, // Skylette Set of 3 Black Grey (Rs 16,990 · Save Rs 9,490)
+  55858, // Dashway Set of 3 Orange Grey (Rs 16,500 · Save Rs 1,790)
+  55872, // Gemina PRO L Black (Rs 9,495 · Save Rs 2,495)
 ];
 
 const CORE_16_PROMO_IDS = [
-  56981,
-  56513,
-  47808,
-  55861,
-  55867,
-  50396,
-  52138,
-  56583,
-  56584,
-  56582,
-  41100,
-  41101,
-  55872,
-  47874,
-  47851,
-  41271,
+  48101, // Skytrac Set of 3 Sunshine Yellow — Rs 15,990 (Save Rs 4,510)
+  50396, // Skylette Set of 3 Black Grey — Rs 16,990 (Save Rs 9,490)
+  55858, // Dashway Set of 3 Orange Grey — Rs 16,500 (Save Rs 1,790)
+  55956, // Duncan Set of 3 Purple — Rs 16,500 (Save Rs 1,790)
+  55939, // Mystic Set of 3 Blue — Rs 14,990 (Save Rs 2,010)
+  51946, // Aerojoy Set of 3 Black — Rs 16,990 (Save Rs 2,000)
+  55872, // Gemina PRO L Black — Rs 9,495 (On Sale · Save Rs 2,495)
+  43778, // Frontec Medium Frozen Matcha — Rs 8,990 (On Sale · Save Rs 4,010)
+  52065, // Robotech Medium Dark Green — Rs 12,500 (On Sale · Save Rs 2,000)
+  41106, // Skypark Medium Black — Rs 7,000 (On Sale · Save Rs 1,000)
+  50377, // Skylette Cabin Black Grey — Rs 6,000 (On Sale · Save Rs 1,500)
+  50389, // Skylette Medium Black Grey — Rs 8,000 (On Sale · Save Rs 990)
+  50394, // Skylette X-Large Black Grey — Rs 9,000 (On Sale · Save Rs 990)
+  52895, // Bass Rolling Tote Black — Rs 6,990 (On Sale · Save Rs 3,000)
+  52886, // Segno Briefcase Black — Rs 4,990 (On Sale · Save Rs 1,000)
+  45411, // Backpack Sest 2.0 Black — Rs 1,400 (On Sale · Save Rs 1,400)
 ];
 
 async function loadProxiedImage(

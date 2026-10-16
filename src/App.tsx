@@ -127,7 +127,6 @@ const SIZE_TABS = [
   'All',
   'Promos & Bundles',
   'Set of 3',
-  'Combo / 2-Pack',
   'Large / X-Large',
   'Medium',
   'Cabin',

@@ -1182,11 +1182,9 @@ export function getCompleteSeriesLineup(
     const matching = fallbackProducts.filter((p) => getExactSizeClass(p) === sc);
     if (matching.length === 0) continue;
 
-    // For Skytrac, separate standard single unit vs 2-pack offer if both exist
+    // For Skytrac standard single units
     if (seriesName === 'Skytrac' && ['Cabin', 'Medium', 'Large'].includes(sc)) {
-      const singleUnit = matching.find((m) => !/offer/i.test(m.name));
-      const offerPair = matching.find((m) => /offer/i.test(m.name));
-      const chosen = singleUnit || offerPair || matching[0];
+      const chosen = matching.find((m) => !/offer/i.test(m.name)) || matching[0];
       const sp = getProductSpecifications(chosen, allProducts);
       const heightMatch = sp.dimensionsCm.match(/^(\d+(?:\.\d+)?)/);
       const cmTag = heightMatch ? ` (${heightMatch[1]}cm)` : '';
@@ -1196,14 +1194,10 @@ export function getCompleteSeriesLineup(
         dimensionsCm: sp.dimensionsCm.replace(' (Each)', ''),
         volumeLitres: sp.volumeLitres.replace(' × 2 Units', ''),
         weightKg: sp.weightKg.replace(' (Each)', ''),
-        priceRs: singleUnit ? singleUnit.priceRs : chosen.priceRs,
-        regularPriceRs: singleUnit?.regularPriceRs,
-        subPriceBadge: offerPair
-          ? `2 FOR Rs ${offerPair.priceRs.toLocaleString('en-MU')}`
-          : undefined,
-        promoNote: offerPair
-          ? `2 FOR Rs ${offerPair.priceRs.toLocaleString('en-MU')} (2nd -50%)`
-          : undefined,
+        priceRs: chosen.priceRs,
+        regularPriceRs: chosen.regularPriceRs,
+        subPriceBadge: undefined,
+        promoNote: undefined,
         image: chosen.image || seriesFallbackImg,
         productId: chosen.id,
       });
