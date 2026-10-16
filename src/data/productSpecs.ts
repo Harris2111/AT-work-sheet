@@ -1224,32 +1224,11 @@ export function getCompleteSeriesLineup(
 
     let promoNote: string | undefined;
     let subPriceBadge: string | undefined;
-    if (seriesName === 'Bricklane' && (sc === 'Medium' || sc === 'Large')) {
-      promoNote = '+55cm Cabin @ Rs 2,250 (-50%)';
-      subPriceBadge = '+CABIN: Rs 2,250';
-    } else if (seriesName === 'Jamaica' && sc === 'X-Large') {
-      promoNote = 'ADD +RS 1,500 FOR CABIN · CABIN + XL @ RS 9,000';
-      subPriceBadge = 'CABIN + XL: Rs 9,000';
-    } else if (seriesName === 'Gemina Pro' && sc === 'Large') {
-      promoNote = '+FREE 950ml Copper Bottle';
-    } else if (
-      seriesName === 'Novastream' &&
-      (sc === 'Medium' || sc === 'Large')
-    ) {
-      promoNote = '+FREE Travel Rice Cooker';
-    } else if (seriesName === 'Aerospin' && sc === 'X-Large') {
-      promoNote = '+FREE Baseus Powerbank (Stone Basalt)';
-    } else if (seriesName === 'Senna' && rep.hasPromo) {
-      promoNote = rep.promoBadge;
-    } else if (
-      seriesName === 'Jamaica' &&
-      sc === 'Set of 3' &&
-      /medium\s*3\s*pcs|3\s*medium/i.test(rep.name)
-    ) {
-      promoNote = '3 × MEDIUM (69CM) · SAVE Rs 5,980';
+    if (seriesName === 'Gemina Pro' && sc === 'Large') {
+      promoNote = 'SAVE Rs 2,495 (ON SALE)';
     } else if (rep.regularPriceRs && rep.regularPriceRs > rep.priceRs) {
       promoNote = `SAVE Rs ${(rep.regularPriceRs - rep.priceRs).toLocaleString('en-MU')}`;
-    } else if (rep.promoBadge) {
+    } else if (rep.promoBadge && !rep.promoBadge.includes('Concluded')) {
       promoNote = rep.promoBadge;
     }
 
@@ -1317,7 +1296,7 @@ export function getCompleteSeriesLineup(
         weightKg: sp.weightKg,
         priceRs: p.priceRs,
         regularPriceRs: p.regularPriceRs,
-        promoNote: p.promoBadge,
+        promoNote: p.promoBadge || undefined,
         image: p.image || seriesFallbackImg,
         productId: p.id,
       });
@@ -1330,14 +1309,14 @@ export function getCompleteSeriesLineup(
   let bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
 
   if (seriesName === 'Bricklane') {
-    heroPromoBanner = `BUY MEDIUM OR LARGE → GET CABIN AT 50% OFF!`;
-    bottomPromoCallout = `ADD 55CM CABIN FOR ONLY RS 2,250 (WAS RS 4,500) WITH 69CM / 80CM!`;
+    heroPromoBanner = `EXPANDABLE BOX-SILHOUETTE · EXTRA PACKING VOLUME`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Skytrac') {
-    heroPromoBanner = `2ND SAME-SIZE SUITCASE AT 50% OFF · SET RS 15,990!`;
-    bottomPromoCallout = `2 CABIN: RS 8,250 · 2 MEDIUM: RS 10,500 · 2 LARGE: RS 12,000!`;
+    heroPromoBanner = `COMPLETE 3-PIECE SET ON SALE AT RS 15,990!`;
+    bottomPromoCallout = `SAVE RS 4,510 ON 3-PC SET (CABIN + MEDIUM + LARGE) · TSA LOCK`;
   } else if (seriesName === 'Jamaica') {
-    heroPromoBanner = `SET OF 3 MEDIUM RS 11,990 · CABIN + XL RS 9,000!`;
-    bottomPromoCallout = `CABIN + XL: RS 9,000 (SAVE RS 3,300) · 3× MED: RS 11,990!`;
+    heroPromoBanner = `FEATHERLIGHT POLYESTER · MAXIMUM PACKING CAPACITY`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Dashway') {
     heroPromoBanner = `COMPLETE 3-PIECE SET ON SALE AT RS 16,500!`;
     bottomPromoCallout = `SAVE RS 1,790 ON THE 3-PC SET (CABIN + MEDIUM + X-LARGE)!`;
@@ -1345,14 +1324,14 @@ export function getCompleteSeriesLineup(
     heroPromoBanner = `COMPLETE 3-PIECE SET ON SALE AT RS 16,500!`;
     bottomPromoCallout = `SAVE RS 1,790 ON THE 3-PC SET (55CM + 68CM + 81CM = 269L)!`;
   } else if (seriesName === 'Gemina Pro') {
-    heroPromoBanner = `LARGE ON SALE RS 9,495 + FREE COPPER BOTTLE!`;
-    bottomPromoCallout = `SAVE RS 2,495 ON LARGE + FREE 950ML COPPER BOTTLE (RS 1,395)!`;
+    heroPromoBanner = `LARGE ON SALE RS 9,495 (WAS RS 11,990 · SAVE RS 2,495)!`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Novastream') {
-    heroPromoBanner = `FREE RICO TRAVEL RICE COOKER WITH MED / LARGE!`;
-    bottomPromoCallout = `FREE TRAVEL RICE COOKER (WORTH RS 1,390) WITH MEDIUM OR LARGE!`;
+    heroPromoBanner = `EXPANDABLE POLYCARBONATE · 3-YEAR GLOBAL WARRANTY`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Aerospin') {
-    heroPromoBanner = `ULTRA-LIGHT SOFTSIDE · FREE POWERBANK ON XL!`;
-    bottomPromoCallout = `FREE BASEUS POWERBANK (WORTH RS 1,290) ON XL STONE BASALT!`;
+    heroPromoBanner = `ULTRA-LIGHTWEIGHT FABRIC · 4-WHEEL SMOOTH SPINNER`;
+    bottomPromoCallout = `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`;
   } else if (seriesName === 'Skylette') {
     heroPromoBanner = `3-PC SET FLASH SALE RS 16,990 (SAVE RS 9,490)!`;
     bottomPromoCallout = `CABIN + MEDIUM + X-LARGE SET FOR RS 16,990 (WAS RS 26,480)!`;

@@ -5,7 +5,7 @@ interface ProductImageProps {
   src: string;
   alt: string;
   series: string;
-  title: string;
+  title?: string;
   className?: string;
   eager?: boolean;
   useProxy?: boolean;

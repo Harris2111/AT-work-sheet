@@ -10,7 +10,7 @@ export interface AbDesaiATProduct {
   regularPriceRs?: number;
   onSale: boolean;
   hasPromo: boolean;
-  promoBadge?: string;
+  promoBadge?: string | null;
   inStock: boolean;
   permalink: string;
   image: string;
@@ -98,8 +98,8 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 11990,
     "regularPriceRs": 17970,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "Set of 3 Medium (3 × 69cm) · Save Rs 5,980",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-medium-3-pcs/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/10/Jamaica-3medium.jpg",
@@ -118,8 +118,8 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 10500,
     "regularPriceRs": 14000,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "Buy 1 Get 2nd at 50% Off (Price for 2 · Save Rs 3,500)",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skytrac-medium-offer/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Sktrac-Medium-offer.webp",
@@ -130,7 +130,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skytrac-Medium-Steelgrey.webp",
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-medium.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56583,
@@ -142,8 +142,8 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 12000,
     "regularPriceRs": 16000,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "Buy 1 Get 2nd at 50% Off (Price for 2 · Save Rs 4,000)",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skytrac-large-offer/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Sktrac-Large-offer.webp",
@@ -154,7 +154,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/09/skypark-large-greysteel.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-large-main.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56582,
@@ -166,8 +166,8 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 8250,
     "regularPriceRs": 11000,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "Buy 1 Get 2nd at 50% Off (Price for 2 · Save Rs 2,750)",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skytrac-cabin-offer/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Sktrac-Cabin-offer.webp",
@@ -178,7 +178,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-cabin-1.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-cabin-02.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK,NAVY, STEEL GREY, SUBMARINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56513,
@@ -190,15 +190,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 9000,
     "regularPriceRs": 12300,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "2-Piece Combo · Save Rs 3,300",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-cabin-large-navy-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-NBlue.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-NBlue.jpg"
     ],
-    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:BLACK TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:BLACK TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56512,
@@ -210,15 +210,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 9000,
     "regularPriceRs": 12300,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "2-Piece Combo · Save Rs 3,300",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-cabin-large-mustard-yellow/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Mst-Yellow.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Mst-Yellow.jpg"
     ],
-    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:MUSTARD YELLOW TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:MUSTARD YELLOW TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56511,
@@ -230,15 +230,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 9000,
     "regularPriceRs": 12300,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "2-Piece Combo · Save Rs 3,300",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-cabin-large-grey/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Grey.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Grey.jpg"
     ],
-    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:GREY TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:GREY TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56510,
@@ -250,15 +250,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 9000,
     "regularPriceRs": 12300,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "2-Piece Combo · Save Rs 3,300",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-cabin-large-purple/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Purple.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Purple.jpg"
     ],
-    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:PURPLE TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:PURPLE TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56504,
@@ -270,15 +270,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "priceRs": 9000,
     "regularPriceRs": 12300,
     "onSale": true,
-    "hasPromo": true,
-    "promoBadge": "2-Piece Combo · Save Rs 3,300",
+    "hasPromo": false,
+    "promoBadge": "Special Promo Concluded 15 Oct",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/jamaica-cabin-large-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Black.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/09/Jamaica-2-Black.jpg"
     ],
-    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:BLACK TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Jamaica soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of cozy tough fabric Fixed Combination lock for security. Soft handles for comfortable grip Attractive color combination. Features European Design, Silver Logo Print, Voluminous Front Pocket, 3-Dial Combi Lock, Elastic Cross Ribbons, Accent piping / Stitching, Expandability Colour:BLACK TSA Combination Lock Material: High Density Polyester Limited 3 year Global Warranty Cabin Size Dimension : 57cm x36 cm x 24cm Expandable | Fixed combination Lock | Mesh Pocket Weight :2.1 Kg XLarge Size Dimension : 80cm x49 cm x 34cm Expandable Weight :3.9 Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 48116,
@@ -306,7 +306,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-generic-1.webp",
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Set3-Yelllow.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 48101,
@@ -319,7 +319,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 20500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 4,510",
+    "promoBadge": "On Sale \u00b7 Save Rs 4,510",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-skytrac-set-of-3-sunshine-yellow/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Set3-Yelllow.webp",
@@ -338,7 +338,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-generic-8.webp",
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-generic-10.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 41271,
@@ -351,7 +351,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 20500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 4,510",
+    "promoBadge": "On Sale \u00b7 Save Rs 4,510",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-skytrac-set-of-3-navy-hz9-09-011/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-set3-main.webp",
@@ -361,7 +361,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-large-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-medium-1.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: NAVY FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: NAVY FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 35618,
@@ -374,7 +374,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 20500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 4,510",
+    "promoBadge": "On Sale \u00b7 Save Rs 4,510",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-skytrac-set-of-3-black-hz9-41-011/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-set3-main.webp",
@@ -384,7 +384,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-large-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-mediummain.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 50767,
@@ -402,7 +402,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/skypark-large-greysteel.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 50764,
@@ -420,7 +420,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skytrac-Medium-Steelgrey.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 48117,
@@ -448,7 +448,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-generic-1.webp",
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Set3-Yelllow.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 41272,
@@ -468,7 +468,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-cabin-01.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-cabin-02.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Black FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Black FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 41270,
@@ -487,7 +487,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-large-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-large-1.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 41269,
@@ -506,7 +506,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-medium-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-navy-medium-1.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 × 46 × 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Medium Size Volume : 68L Dimension : 68 \u00d7 46 \u00d7 29 cm Weight : 3.6Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 50761,
@@ -524,7 +524,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skytrac-Cabin-Steelgrey.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Steel Grey FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 48115,
@@ -552,7 +552,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Yellow-generic-1.webp",
       "https://abdesai.mu/wp-content/uploads/2025/06/Skytrac-Set3-Yelllow.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: SUNSHINE YELLOW FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 41268,
@@ -572,7 +572,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-Navy-cabin-01.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-Navy-cabin-012webp.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Navy FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 35606,
@@ -592,7 +592,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-cabin-02.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-cabin-01.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 × 24 × 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: BLACK FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Cabin Size Volume : 32L Dimension : 55 \u00d7 24 \u00d7 36 cm Weight : 2.7Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 35604,
@@ -612,7 +612,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-large-1.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skytrac-black-large-2.webp"
     ],
-    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Black FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 × 54 × 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The classic linear grooves makes SKYTRAC a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. This collection is built on sturdy platform that suits the basic needs of all travelers with amazing price. Features Colour: Black FIX Combination Lock Material: HS ABS (VACUUM) Limited 3 year Global Warranty Large Size Volume : 102L Dimension : 79 \u00d7 54 \u00d7 33 cm Weight : 4.8Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 51981,
@@ -859,7 +859,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-GOldenyellow-m-5.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-GOldenyellow-m-6.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm • Volume: 41 /47L • Weight: 2.5 kg • Expandable: 23.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm • Volume: 76 /84L • Weight: 3.3 kg • Expandable: 32.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm \u2022 Volume: 41 /47L \u2022 Weight: 2.5 kg \u2022 Expandable: 23.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm \u2022 Volume: 76 /84L \u2022 Weight: 3.3 kg \u2022 Expandable: 32.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53677,
@@ -884,7 +884,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-Black-CM-5.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-Black-CM-6.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm • Volume: 41 /47L • Weight: 2.5 kg • Expandable: 23.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm • Volume: 76 /84L • Weight: 3.3 kg • Expandable: 32.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm \u2022 Volume: 41 /47L \u2022 Weight: 2.5 kg \u2022 Expandable: 23.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm \u2022 Volume: 76 /84L \u2022 Weight: 3.3 kg \u2022 Expandable: 32.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53676,
@@ -909,19 +909,19 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/dashpop-CM-Blue-5.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/dashpop-CM-Blue-6.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm • Volume: 41 /47L • Weight: 2.5 kg • Expandable: 23.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm • Volume: 76 /84L • Weight: 3.3 kg • Expandable: 32.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) Cabin Dimension: 55 x 40 x 20 cm \u2022 Volume: 41 /47L \u2022 Weight: 2.5 kg \u2022 Expandable: 23.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Medium Dimension: 67 x 45 x 28 cm \u2022 Volume: 76 /84L \u2022 Weight: 3.3 kg \u2022 Expandable: 32.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 47808,
-    "name": "AMERICAN TOURISTER Bricklane Dark Shadow 80cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Dark Shadow 80cm",
     "slug": "american-tourister-bricklane-dark-shadow-80cm",
     "sku": "Bricklane XL A DSha",
     "series": "Bricklane",
     "sizeCategory": "Large / X-Large",
     "priceRs": 8000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-dark-shadow-80cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Bricklane-Dark-Shadow-Medium.jpg",
@@ -932,15 +932,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 47805,
-    "name": "AMERICAN TOURISTER Bricklane Dark Forest 80cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Dark Forest 80cm",
     "slug": "american-tourister-bricklane-dark-forest-80cm",
     "sku": "Bricklane XL A DkFo",
     "series": "Bricklane",
     "sizeCategory": "Large / X-Large",
     "priceRs": 8000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-dark-forest-80cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/08/Bricklane-FoGrn-Large.jpg",
@@ -951,15 +951,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 41100,
-    "name": "AMERICAN TOURISTER Bricklane Oxford Blue 80cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Oxford Blue 80cm",
     "slug": "american-tourister-bricklane-oxford-blue-79cm",
     "sku": "Bricklane XL A OxBlu",
     "series": "Bricklane",
     "sizeCategory": "Large / X-Large",
     "priceRs": 8000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-oxford-blue-79cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/bricklane-OX-BLUE-Large.jpg",
@@ -970,15 +970,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 22452,
-    "name": "AMERICAN TOURISTER Bricklane Black 80cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Black 80cm",
     "slug": "american-tourister-bricklane-black-large-atb230",
     "sku": "Bricklane XL A JBlk",
     "series": "Bricklane",
     "sizeCategory": "Large / X-Large",
     "priceRs": 8000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-black-large-atb230/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/ATB230-Bricklane-Black-79cm-main.webp",
@@ -1001,14 +1001,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/dashway-set3-orange-grey/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Ora-Gry-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Ora-Gry-1.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55465,
@@ -1026,7 +1026,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-CorsairBlueBlack-Cabin.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55860,
@@ -1039,14 +1039,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/dashway-set3-grey-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Gry-Blk-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Gry-Blk-1.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55490,
@@ -1064,7 +1064,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-CorsairBlueBlack-XLarge.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55487,
@@ -1082,7 +1082,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-GreyBlack-Medium.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55486,
@@ -1100,7 +1100,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-OrangeGrey-Medium.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55484,
@@ -1118,7 +1118,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-CorsairBlue-Medium.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55478,
@@ -1136,7 +1136,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-OrangeGrey-cabin.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55476,
@@ -1154,7 +1154,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-GreyBlack-Cabin.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55856,
@@ -1167,14 +1167,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/dashway-set3-blu-blk/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Blue-Black-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-Set3-Blue-Black-1.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Cabin Item Dimensions L x W x H: 40L x 23W x 58H cm Item Weight: 2.5Kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Medium Item Dimensions L x W x H: 46L x 25W x 70H cm Item Weight: 3.6kg Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55489,
@@ -1192,7 +1192,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-OrangeGrey-XLarge.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 82H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55488,
@@ -1210,7 +1210,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2026/07/Dashway-GreyBlack-XLarge.webp"
     ],
-    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 80H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Dashway is a versatile travel companion designed for convenience and durability. Built with a softside construction and smooth-rolling 4-wheel spinner system, it offers easy maneuverability through busy airports and city streets. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Other Special Features of the Product: Expandable Wheel Type: Spinner Number of wheels: 8 Lock Type: Combination Lock Size: Large Item Dimensions L x W x H: 50L x 32W x 80H cm Item Weight: 4.3Kg Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 51999,
@@ -1285,7 +1285,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/07/Maxplus-set3-black-2.webp",
       "https://abdesai.mu/wp-content/uploads/2025/07/maxplusset3black-main.webp"
     ],
-    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you’re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you’re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
+    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you\u2019re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you\u2019re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
   },
   {
     "id": 56341,
@@ -1304,7 +1304,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/07/maxplusset3navyblue-main.webp"
     ],
-    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you’re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you’re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
+    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you\u2019re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you\u2019re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
   },
   {
     "id": 56295,
@@ -1325,7 +1325,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Blue.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56288,
@@ -1348,7 +1348,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Blue.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Black.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56311,
@@ -1370,7 +1370,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Blue.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56310,
@@ -1389,7 +1389,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-L-green.png.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56309,
@@ -1408,7 +1408,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-m-green.png.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56308,
@@ -1431,7 +1431,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Black.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56306,
@@ -1453,7 +1453,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Blue.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Black.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56300,
@@ -1472,7 +1472,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-c-black.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-generic-black.jpg.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56312,
@@ -1495,7 +1495,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Black.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56265,
@@ -1508,7 +1508,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 17000,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,010",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,010",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/mystic-set3-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Blue.webp",
@@ -1520,7 +1520,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-blue-generic1.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-blue-generic.jpg.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56264,
@@ -1533,7 +1533,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 17000,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,010",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,010",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/mystic-set3-green/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Green.webp",
@@ -1543,7 +1543,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-L-green.png.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-c-green.png.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 56259,
@@ -1556,7 +1556,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 17000,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,010",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,010",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/mystic-set3-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/08/Mystic-Set3-Black.webp",
@@ -1567,11 +1567,11 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-c-black.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2026/08/mystic-generic-black.jpg.webp"
     ],
-    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today’s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360° single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. • Light Weight • Durable Fabric • Pocket Zipper inside • 2 Compartments • Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "American Tourister Mystic combines contemporary style with practical functionality, making it the ideal travel companion for every journey. Designed for today\u2019s traveler, it offers a sleek look, dependable performance, and thoughtful organization, ensuring a comfortable and hassle-free travel experience wherever you go. American Tourister Mystic is crafted from durable and lightweight Polyester-Soft and features an expandable design for added packing flexibility. Equipped with smooth 360\u00b0 single spinner wheels, an adjustable telescopic handle, it delivers effortless mobility and enhanced security. The spacious interior includes a divider panel, inside straps, and extendable zipper for organized packing, while textured finish helps maintain its modern appearance. Available in Cabin, Medium, and Large sizes, Mystic is designed to meet the needs of every traveler. \u2022 Light Weight \u2022 Durable Fabric \u2022 Pocket Zipper inside \u2022 2 Compartments \u2022 Front pocket Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55872,
-    "name": "AMERICAN TOURISTER Gemina PRO L Black with Free 950Ml Copper Bottle DV30 worth Rs 1395.",
+    "name": "AMERICAN TOURISTER Gemina PRO L Black",
     "slug": "gemina-pro-l-blk",
     "sku": "Gemina PRO L Blk",
     "series": "Gemina Pro",
@@ -1580,7 +1580,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 11990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "Save Rs 2,495 + Free 950ml Copper Bottle",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,495",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/gemina-pro-l-blk/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Gemina-Black-Large.webp",
@@ -1592,7 +1592,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-black-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-black-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55868,
@@ -1615,11 +1615,11 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Genericcabin-black-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Genericcabin-black-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you’re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
   },
   {
     "id": 55867,
-    "name": "AMERICAN TOURISTER Gemina PRO L Blue with Free 950Ml Copper Bottle DV30 worth Rs 1395.",
+    "name": "AMERICAN TOURISTER Gemina PRO L Blue",
     "slug": "gemina-pro-l-blue",
     "sku": "Gemina PRO L Blue",
     "series": "Gemina Pro",
@@ -1628,7 +1628,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 11990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "Save Rs 2,495 + Free 950ml Copper Bottle",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,495",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/gemina-pro-l-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Gemina-MistralBlue-Large.webp",
@@ -1640,7 +1640,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-blue-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-blue-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55866,
@@ -1663,7 +1663,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-Med-Beige-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-Med-Beige-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55862,
@@ -1686,7 +1686,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-Beige-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-Beige-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you’re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
   },
   {
     "id": 55884,
@@ -1709,11 +1709,11 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-green-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-green-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55883,
-    "name": "AMERICAN TOURISTER Gemina PRO L Green with Free 950Ml Copper Bottle DV30 worth Rs 1395.",
+    "name": "AMERICAN TOURISTER Gemina PRO L Green",
     "slug": "gemina-pro-l-grn",
     "sku": "Gemina PRO L Grn",
     "series": "Gemina Pro",
@@ -1722,7 +1722,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 11990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "Save Rs 2,495 + Free 950ml Copper Bottle",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,495",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/gemina-pro-l-grn/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Gemina-Evergreen-Large.webp",
@@ -1734,7 +1734,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-green-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-large-green-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55879,
@@ -1757,7 +1757,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-green-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-green-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you’re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
   },
   {
     "id": 55878,
@@ -1780,7 +1780,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-blue-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-blue-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55874,
@@ -1803,7 +1803,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-blue-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-cabin-blue-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you’re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The cabin-sized Gemina Pro Spinner 55/20 TSA EXP comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more. It is equipped with a TSA 008 Combi Lock and Duosaf Security Zipper to ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the handy USB port (Type A and Type C) lets you charge your devices, and the integrated cup holder keeps your hands free."
   },
   {
     "id": 55873,
@@ -1826,11 +1826,11 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-black-4.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-medium-black-5.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 65/24 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55902,
-    "name": "AMERICAN TOURISTER Gemina PRO L Beige with Free 950Ml Copper Bottle DV30 worth Rs 1395.",
+    "name": "AMERICAN TOURISTER Gemina PRO L Beige",
     "slug": "gemina-pro-l-beige",
     "sku": "Gemina PRO L Beige",
     "series": "Gemina Pro",
@@ -1839,7 +1839,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 11990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "Save Rs 2,495 + Free 950ml Copper Bottle",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,495",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/gemina-pro-l-beige/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Gemina-ChalkBeige-Large.webp",
@@ -1851,7 +1851,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-Large-Beige-14.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/08/GEMINA-Generic-Large-Beige-15.jpg.avif"
     ],
-    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you’re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
+    "specsText": "Look sleek and move smooth with the new Gemina Pro collection . With a bespoke design composed of vertical and horizontal grooves finished with a metallic sheen, this collection will embellish your travel experiences with a modern and eye-catching aesthetic. On the go, you can look forward to ultra-smooth rolling and easy stopping with the revolutionary combination of Optimov shock absorbing wheels and the StePause wheel stopper . Gemina Pro is constructed with sturdy polycarbonate for enhanced durability wherever your journeys take you. The Gemina Pro Spinner 75/28 EXP TSA comes with packing straps on both sides of the main compartment for easy organization plus an expander that lets you pack in more without compromising its sleek appearance. The TSA 008 Combi Lock and Duosaf Security Zipper ensure that your belongings stay reassuringly secure. When you\u2019re on the move, the side stud with carry hook function, and integrated cup holder keep your hands conveniently free."
   },
   {
     "id": 55930,
@@ -1872,7 +1872,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-M-PBloss-1.webp",
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-XL-PBloss-1.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Peach Blossom TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Peach Blossom TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 55905,
@@ -1897,7 +1897,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-XL-PBloss-pic-6.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-XL-PBloss-pic-7.jpg.avif"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 55904,
@@ -1922,7 +1922,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-M-PBloss-pic-6.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-M-PBloss-pic-7.jpg.avif"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 55903,
@@ -1947,7 +1947,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-C-PBloss-pic-6.jpg.avif",
       "https://abdesai.mu/wp-content/uploads/2026/07/Hundo-C-PBloss-pic-7.jpg.avif"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Blossom Peach TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52031,
@@ -1965,7 +1965,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-Deep-Teal-M-Main.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Deep Teal TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Deep Teal TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52019,
@@ -1983,7 +1983,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-M-Black-main.jpg"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Black TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Black TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52015,
@@ -2001,7 +2001,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-M-flintstone-main.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Flintstone TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Flintstone TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52028,
@@ -2019,7 +2019,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-Deep-Teal-C-Main.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Deep Teal TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Deep Teal TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 48009,
@@ -2042,7 +2042,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-1.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-4.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Brown Material: POLYESTER Volume: 128L Dimension: 81 × 49 × 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Brown Material: POLYESTER Volume: 128L Dimension: 81 \u00d7 49 \u00d7 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
   },
   {
     "id": 41116,
@@ -2061,7 +2061,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/DUncan-Large-Black-main.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Duncan-Set-black-main.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Black Material: POLYESTER Volume: 128L Dimension: 81 × 49 × 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Black Material: POLYESTER Volume: 128L Dimension: 81 \u00d7 49 \u00d7 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
   },
   {
     "id": 23437,
@@ -2074,7 +2074,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-duncan-set-of-3pcs-purple/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/ATD010-Duncan-Purple-Set-main.webp",
@@ -2084,7 +2084,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD012-Duncan-Purple-Medium-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD013-Duncan-Purple-Large-main.webp"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
   },
   {
     "id": 23425,
@@ -2103,7 +2103,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD013-Duncan-Purple-Large-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD010-Duncan-Purple-Set-main.webp"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Purple Material: POLYESTER Volume: 128L Dimension: 81 × 49 × 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket. Features Colour: Purple Material: POLYESTER Volume: 128L Dimension: 81 \u00d7 49 \u00d7 34 cm Expandable: EXPANDABLE Weight: 3.9 kg Limited 3 year Global Warranty in more than 120 countries"
   },
   {
     "id": 50787,
@@ -2116,7 +2116,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/duncan-set3-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Duncaset3Navyblue-main.webp",
@@ -2130,7 +2130,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/09/Duncan-Blue-6.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/09/Duncan-Blue-7.webp.jpeg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in brown. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in brown. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
   },
   {
     "id": 48012,
@@ -2143,7 +2143,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-duncan-set-of-3-brown/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/06/Duncan-Set3-Brown.jpg",
@@ -2154,7 +2154,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Duncan-Brown-large-1.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-4.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in brown. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in brown. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
   },
   {
     "id": 48001,
@@ -2177,7 +2177,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/Duncan-Medium-Brown-2.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-4.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Brown Material: POLYESTER Volume: 85L Dimension: 68 × 42 × 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Brown Material: POLYESTER Volume: 85L Dimension: 68 \u00d7 42 \u00d7 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 47999,
@@ -2201,7 +2201,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-1.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/06/duncan-brown-generic-4.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Brown Material: POLYESTER Volume: 56L Dimension: 55 × 36 × 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Brown Material: POLYESTER Volume: 56L Dimension: 55 \u00d7 36 \u00d7 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 41114,
@@ -2214,14 +2214,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18290,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,790",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,790",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-duncan-set-of-3-black-fl8-09904/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/Duncan-Set-black-main.jpg",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2024/11/Duncan-Set-black-main.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort."
   },
   {
     "id": 33588,
@@ -2240,7 +2240,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/DUncan-med-Black-main.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Duncan-Set-black-main.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Black Material: POLYESTER Volume: 85L Dimension: 68 × 42 × 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Black Material: POLYESTER Volume: 85L Dimension: 68 \u00d7 42 \u00d7 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 23432,
@@ -2259,7 +2259,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD011-Duncan-Purple-Cabin-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD010-Duncan-Purple-Set-main.webp"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Purple Material: POLYESTER Volume: 56L Dimension: 55 × 36 × 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Purple Material: POLYESTER Volume: 56L Dimension: 55 \u00d7 36 \u00d7 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 41115,
@@ -2278,7 +2278,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/DUncan-Cab-Black-main.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Duncan-Set-black-main.jpg"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Black Material: POLYESTER Volume: 56L Dimension: 55 × 36 × 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Black Material: POLYESTER Volume: 56L Dimension: 55 \u00d7 36 \u00d7 24 cm Expandable: EXPANDABLE Weight: 2.1 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 55892,
@@ -2335,7 +2335,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2860,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 210",
+    "promoBadge": "On Sale \u00b7 Save Rs 210",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/at-cosmos-55cm-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2026/07/Cosmo-55cm-1.webp",
@@ -2364,7 +2364,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-1.webp",
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-3.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55850,
@@ -2385,7 +2385,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-2.webp",
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-1.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 55849,
@@ -2406,7 +2406,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-2.webp",
       "https://abdesai.mu/wp-content/uploads/2026/07/Aerospin-Black-Generic-1.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53656,
@@ -2429,7 +2429,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-blue-L-4.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-blue-L-5.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) • Dimension: 77.0 x 50.0 x 30.0 cm • Volume: 104 L/121L • Weight: 3.7 kg • Expandable: 33.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) \u2022 Dimension: 77.0 x 50.0 x 30.0 cm \u2022 Volume: 104 L/121L \u2022 Weight: 3.7 kg \u2022 Expandable: 33.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53654,
@@ -2452,7 +2452,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-Black-L-5.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-Black-L-7.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) • Dimension: 77.0 x 50.0 x 30.0 cm • Volume: 104 L/121L • Weight: 3.7 kg • Expandable: 33.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) \u2022 Dimension: 77.0 x 50.0 x 30.0 cm \u2022 Volume: 104 L/121L \u2022 Weight: 3.7 kg \u2022 Expandable: 33.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53652,
@@ -2475,7 +2475,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-GOldenyellow-L-4.webp",
       "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-GOldenyellow-L-5.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours – because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it’s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel – because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) • Dimension: 77.0 x 50.0 x 30.0 cm • Volume: 104 L/121L • Weight: 3.7 kg • Expandable: 33.0 cm • Zippers: Yes • Wheels Type: Double Wheels • Bottom Grip: Yes • Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2026/02/Dashpop-video.mp4 Straight from our European range, Dashpop is as cool as it is functional. It features expandability in all sizes, you can pack everything from a weekend getaway to a month-long trip. The side panel comes with fun stickers to make your suitcase truly yours \u2013 because who wants to blend in with the crowd? With top-notch organisation features, you can easily stash your clothes and travel essentials. Plus, it\u2019s made from strong polypropylene, so it can handle whatever your adventures throw at it. Make a statement with Dashpop wherever you travel \u2013 because every journey deserves a pop of personality. Material: HS POLYPROPYLENE(INJ) \u2022 Dimension: 77.0 x 50.0 x 30.0 cm \u2022 Volume: 104 L/121L \u2022 Weight: 3.7 kg \u2022 Expandable: 33.0 cm \u2022 Zippers: Yes \u2022 Wheels Type: Double Wheels \u2022 Bottom Grip: Yes \u2022 Interior: 100% by weight of the interior fabric and zipper are made with post-consumer recycled PET plastic using 13 recycled bottles of 500ml. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 53601,
@@ -2519,7 +2519,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/12/Trento-Black-C-main.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2025/12/trento-gallery1.webp"
     ],
-    "specsText": "Meet Trento—designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it’s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you’re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
+    "specsText": "Meet Trento\u2014designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it\u2019s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you\u2019re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52004,
@@ -2537,7 +2537,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-C-Black-main.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:BLACK TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:BLACK TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52009,
@@ -2555,38 +2555,38 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Hundo-C-flintstone-main.webp"
     ],
-    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban®. Features Colour:Flintstone TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
+    "specsText": "HUNDO combines a timeless design with square tile pattern. Made of versatile and strong PP material gives HUNDO a strong and durable structure. Expander on check-in size allows flexibility during packing. Smooth rolling double wheels are sure to let every traveler looking for a great travel solution at an affordable price. HUNDO offers all the essential features that travelers need to worry-less, which is especially true with rPET and antimicrobial treated lining powered by Microban\u00ae. Features Colour:Flintstone TSA Combi Lock Expander in check-in size rPET & Antimicrobial Treated Lining Double Wheels Multi-stop wheel handle Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47874,
-    "name": "AMERICAN TOURISTER Novastream Medium Nomad Green + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Medium Nomad Green",
     "slug": "american-tourister-novastream-medium-nomad-green",
     "sku": "Novastream M NGrn",
     "series": "Novastream",
     "sizeCategory": "Medium",
     "priceRs": 10990,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-medium-nomad-green/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-green-MAIN-medium.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-green-MAIN-medium.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Model: Spinner (4 wheels) Material: 100% Polycarbonate Colour: Nomad green Dimensions: 67 x 45 x 25.5 cm Expanded dimensions: 67 x 45 x 29.5 cm Size: Medium Volume: 64/73 L Weight: 3.6 kg Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Model: Spinner (4 wheels) Material: 100% Polycarbonate Colour: Nomad green Dimensions: 67 x 45 x 25.5 cm Expanded dimensions: 67 x 45 x 29.5 cm Size: Medium Volume: 64/73 L Weight: 3.6 kg Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47859,
-    "name": "AMERICAN TOURISTER Novastream Medium Vintage Pink + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Medium Vintage Pink",
     "slug": "american-tourister-novastream-medium-vintage-pink",
     "sku": "Novastream M VPink",
     "series": "Novastream",
     "sizeCategory": "Medium",
     "priceRs": 10990,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-medium-vintage-pink/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-VINTAGEPINK-MAIN-MEdium.webp",
@@ -2594,38 +2594,38 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-VINTAGEPINK-MAIN-MEdium.webp",
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-M-VPink-1.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47850,
-    "name": "AMERICAN TOURISTER Novastream Medium Navy Blue + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Medium Navy Blue",
     "slug": "american-tourister-novastream-medium-navy-blue",
     "sku": "Novastream M NBlue",
     "series": "Novastream",
     "sizeCategory": "Medium",
     "priceRs": 10990,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-medium-navy-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-NAVYBLUE-medium-main.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-NAVYBLUE-medium-main.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47865,
-    "name": "AMERICAN TOURISTER Novastream Medium Dark Slate + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Medium Dark Slate",
     "slug": "american-tourister-novastream-medium-dark-slate",
     "sku": "Novastream M DSlate",
     "series": "Novastream",
     "sizeCategory": "Medium",
     "priceRs": 10990,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-medium-dark-slate/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-Medium-Black.jpg",
@@ -2633,19 +2633,19 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-Medium-Black.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/05/Large-Novastream-Black02.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 67/24 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 67/24 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47856,
-    "name": "AMERICAN TOURISTER Novastream Large Vintage Pink + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Large Vintage Pink",
     "slug": "american-tourister-novastream-large-vintage-pink",
     "sku": "Novastream L VPink",
     "series": "Novastream",
     "sizeCategory": "Large / X-Large",
     "priceRs": 13000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-large-vintage-pink/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-VINTAGEPINK-MAIN-large.webp",
@@ -2653,57 +2653,57 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-VINTAGEPINK-MAIN-large.webp",
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-L-VPink-1.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47851,
-    "name": "AMERICAN TOURISTER Novastream Large Nomad Green + Free RICO Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Large Nomad Green",
     "slug": "american-tourister-novastream-large-nomad-green",
     "sku": "Novastream L NGrn",
     "series": "Novastream",
     "sizeCategory": "Large / X-Large",
     "priceRs": 13000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-large-nomad-green/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-green-nomad-main-large.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-green-nomad-main-large.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47875,
-    "name": "AMERICAN TOURISTER Novastream Large Navy Blue + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Large Navy Blue",
     "slug": "american-tourister-novastream-large-navy-blue",
     "sku": "Novastream L NBlue",
     "series": "Novastream",
     "sizeCategory": "Large / X-Large",
     "priceRs": 13000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-large-navy-blue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-NAVYBLUE-main-large.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-NAVYBLUE-main-large.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Size(Expanded) 77 x 51.5 x 29.5/34 cm | Spinner (4 wheels) | 100% Polycarbonate | 103/(Expanded)121 L | 4.3 kg Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Size(Expanded) 77 x 51.5 x 29.5/34 cm | Spinner (4 wheels) | 100% Polycarbonate | 103/(Expanded)121 L | 4.3 kg Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47866,
-    "name": "AMERICAN TOURISTER Novastream Large Dark Slate + Free RICO RC2607 Travel RIce Cooker worth Rs 1390",
+    "name": "AMERICAN TOURISTER Novastream Large Dark Slate",
     "slug": "american-tourister-novastream-large-dark-slate",
     "sku": "Novastream L DSlate",
     "series": "Novastream",
     "sizeCategory": "Large / X-Large",
     "priceRs": 13000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free RICO Travel Rice Cooker (Worth Rs 1,390)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-novastream-large-dark-slate/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Large-Novastream-Black01.webp",
@@ -2711,7 +2711,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Large-Novastream-Black01.webp",
       "https://abdesai.mu/wp-content/uploads/2025/05/Large-Novastream-Black02.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort. Size(Expanded) 77 x 51.5 x 29.5/34 cm | Spinner (4 wheels) | 100% Polycarbonate | 103/(Expanded)121 L | 4.3 kg Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The Novastream Spinner 77/28 has a spacious interior lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 77/28 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort. Size(Expanded) 77 x 51.5 x 29.5/34 cm | Spinner (4 wheels) | 100% Polycarbonate | 103/(Expanded)121 L | 4.3 kg Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47845,
@@ -2729,7 +2729,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-green-MAIN-CABIN.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47839,
@@ -2748,7 +2748,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-VINTAGEPINK-MAIN-CABIN.webp",
       "https://abdesai.mu/wp-content/uploads/2025/05/Novastream-s-VPink-1.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 47864,
@@ -2767,7 +2767,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/05/Navastream-cabin-darkslate.webp",
       "https://abdesai.mu/wp-content/uploads/2025/05/Large-Novastream-Black02.webp"
     ],
-    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban® antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you’re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Colour: Black Material: POLYCARBONATE Cabin Size Dimension : 55.0 x 40.0 x 20.0 cm Volume: 36 L Weight: 2.6 kg Expandable: 23.0 cm Expandable Volume: 41 L Warranty 3 years Limited Global Warranty"
+    "specsText": "Minimalistic in design yet providing maximum functionality, Novastream is absolutely made for the modern traveler. This state-of-the-art collection is constructed with extra durable polycarbonate, crafted for comfort and ease-of-use, and packed with features to ensure hassle-free travel. Choose from 4 stylish colors to express your personality. The cabin-sized Novastream Spinner 55/20 is perfect for keeping your travel essentials close by. Its interior is lined with RPET material treated with Microban\u00ae antimicrobial technology for enhanced hygiene. Packing straps on both sides ensure that your belongings stay in place, and the recessed TSA 008 Lock provides maximum security. The Spinner 55/20 is also expandable if you need extra space. When you\u2019re on the move, the double wheels provide smooth rolling comfort and the USB port lets you charge your devices seamlessly as you go. Colour: Black Material: POLYCARBONATE Cabin Size Dimension : 55.0 x 40.0 x 20.0 cm Volume: 36 L Weight: 2.6 kg Expandable: 23.0 cm Expandable Volume: 41 L Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 53065,
@@ -2786,7 +2786,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/12/Trento-Blue-C-main.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2025/12/trento-gallery1.webp"
     ],
-    "specsText": "Meet Trento—designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it’s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you’re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
+    "specsText": "Meet Trento\u2014designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it\u2019s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you\u2019re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 53066,
@@ -2805,7 +2805,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/12/Trento-matcha-C-main.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2025/12/trento-gallery1.webp"
     ],
-    "specsText": "Meet Trento—designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it’s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you’re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
+    "specsText": "Meet Trento\u2014designed to make every journey smoother. Featuring book-opening technology for easy packing, Shock Lock Wheels for smooth, stable movement, and an expander for extra space when needed. Built with high-grade polycarbonate, it\u2019s lightweight yet durable. Available in quirky colors like Matcha, Elemental Blue, and Classic Black, Trento adds personality to your travel. Whether you\u2019re exploring new cities or taking quick getaways, Trento ensures your luggage is as functional as it is stylish. Travel smarter. Travel with Trento. Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 52895,
@@ -2818,7 +2818,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 9990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 3,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 3,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/bass-rolling-tote-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/12/Bass-ROlling-tote-main.webp",
@@ -2838,7 +2838,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 5990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/segno-briefcase-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/12/Segno-Briefcase-blk-main.webp",
@@ -2858,14 +2858,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 5990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/zork-briefcase-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/12/Zork-briefcase-blk-AY109011-main.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/12/Zork-briefcase-blk-AY109011-main.webp"
     ],
-    "specsText": "Introducing the new and extended Zork collection. In addition to backpacks, the Zork collection now also includes a briefcase, slingpack, totepack and shoulder bag. Every new item features the modern, thoughtful and versatile design that has made Zork a must-have for working professionals who want to stay mobile and ready for business. The Zork Briefcase AS has a compartment that holds a laptop of up 15.6\" and a tablet of up to 10\", plus a USB port to charge your devices on the go. The front panel with interior organizer, and front bottom pocket keep business essentials in order. The RPET lining has been treated with Microban® antimicrobial technology for enhanced daily hygiene. The shoulder strap is detachable for smooth carrying as a briefcase, and the smart sleeve allows you to attach the briefcase to your luggage while traveling. For the ultimate comfort and just as trendy for your kids. With 2 full compartments and one half compartment, along with a name tag, padded shoulder strap and back padding for more comfort."
+    "specsText": "Introducing the new and extended Zork collection. In addition to backpacks, the Zork collection now also includes a briefcase, slingpack, totepack and shoulder bag. Every new item features the modern, thoughtful and versatile design that has made Zork a must-have for working professionals who want to stay mobile and ready for business. The Zork Briefcase AS has a compartment that holds a laptop of up 15.6\" and a tablet of up to 10\", plus a USB port to charge your devices on the go. The front panel with interior organizer, and front bottom pocket keep business essentials in order. The RPET lining has been treated with Microban\u00ae antimicrobial technology for enhanced daily hygiene. The shoulder strap is detachable for smooth carrying as a briefcase, and the smart sleeve allows you to attach the briefcase to your luggage while traveling. For the ultimate comfort and just as trendy for your kids. With 2 full compartments and one half compartment, along with a name tag, padded shoulder strap and back padding for more comfort."
   },
   {
     "id": 52302,
@@ -2927,7 +2927,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/Sparky-L-Grey-main.webp"
     ],
-    "specsText": "Featuring the innovative 20:80 PlentiVol&#x2122; Packing Solution, Paxtra lets you pack extra with absolute ease. The larger compartment is ideal for holding bulky items like winter wear, boots, and sports gear while the smaller compartment enables quick access to your essentials. Paxtra’s unique design also makes it easy to pack and unpack in tight spaces — perfect for cramped hotel rooms. Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Featuring the innovative 20:80 PlentiVol&#x2122; Packing Solution, Paxtra lets you pack extra with absolute ease. The larger compartment is ideal for holding bulky items like winter wear, boots, and sports gear while the smaller compartment enables quick access to your essentials. Paxtra\u2019s unique design also makes it easy to pack and unpack in tight spaces \u2014 perfect for cramped hotel rooms. Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52143,
@@ -2945,7 +2945,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-Large-indigo-1.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52138,
@@ -2956,15 +2956,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "sizeCategory": "Large / X-Large",
     "priceRs": 9000,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Free Baseus Powerbank (Worth Rs 1,290)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/aerospin-xl-stonebasalt/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-large-stone-basalt-4.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-large-stone-basalt-4.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes + Free Baseus Powerbank worth Rs 1290 Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 80 x 48 x 33 cm Volume: 106/116L Weight:2.8 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52132,
@@ -2982,7 +2982,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-medium-stone-basalt-2.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52127,
@@ -3000,7 +3000,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-medium-indigo-4.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions:69 x 43 x 29/32 cm Volume: 71/80L Weight:2.5 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52117,
@@ -3018,7 +3018,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-cabin-stone-basalt-6.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52109,
@@ -3036,7 +3036,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/11/aerospin-cabin-indigo-4.webp"
     ],
-    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "Specifications and Features Material: 100% Polyester Expanded dimensions: 55 x 40 x 25 cm Volume: 47/51 L Weight: 1.9 kg Material Type: Softside | 100% by weight of the interior fabric is made with post-consumer recycled PET plastic using 7 recycled bottles of 500ml Lock: TSA to allow safe travel to the US Wheel Handle: Double tube Wheels Type: Double Wheels Exterior Pockets: 2 front pockets Expandable: Yes Interior pockets: Yes Mesh Pocket: Yes Cross-ribbons: Yes Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 52065,
@@ -3049,7 +3049,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 14500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-robotech-medium-dark-green/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-Medium-Dkgrn-main.webp",
@@ -3061,7 +3061,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-medium-darkgreen-4.webp",
       "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-medium-darkgreen-5.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2024/08/American-Tourister-ROBOTECH-Follow-your-Tomorrow.mp4 Robotech lets you pack in all you want with none of the fuss. This innovative collection features the unique 20:80 PlentiVol Packing System that allows you to efficiently organize and access your belongings while maximizing storage space, making packing and unpacking a breeze. It also comes in a range of attractive colors that will complement any look you’re going for. For the modern traveler seeking enhanced packing practicality with a dash of style, Robotech is your go-to companion. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Double Wheels DUOSAF&#x2122; Security Zipper TSA Combi Lock Plentivol Maximum Volume Spinner Wheels Colour: Dark Green Material: Polycarbonate Dimension: 67 x 45 x 29 cm Interior with Multipocket and Packing Strap rPET & Antimicrobial Treated Lining Weight: 4.0 kg Warranty: Limited 3 years international warranty https://abdesai.mu/wp-content/uploads/2024/08/vimeo-828228711-hls-akfire_interconnect_quic-1913.mp4 **"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2024/08/American-Tourister-ROBOTECH-Follow-your-Tomorrow.mp4 Robotech lets you pack in all you want with none of the fuss. This innovative collection features the unique 20:80 PlentiVol Packing System that allows you to efficiently organize and access your belongings while maximizing storage space, making packing and unpacking a breeze. It also comes in a range of attractive colors that will complement any look you\u2019re going for. For the modern traveler seeking enhanced packing practicality with a dash of style, Robotech is your go-to companion. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Double Wheels DUOSAF&#x2122; Security Zipper TSA Combi Lock Plentivol Maximum Volume Spinner Wheels Colour: Dark Green Material: Polycarbonate Dimension: 67 x 45 x 29 cm Interior with Multipocket and Packing Strap rPET & Antimicrobial Treated Lining Weight: 4.0 kg Warranty: Limited 3 years international warranty https://abdesai.mu/wp-content/uploads/2024/08/vimeo-828228711-hls-akfire_interconnect_quic-1913.mp4 **"
   },
   {
     "id": 52050,
@@ -3074,7 +3074,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 14500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/robotech-m-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-Medium-blackmain.webp",
@@ -3087,7 +3087,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-medium-black-5.webp",
       "https://abdesai.mu/wp-content/uploads/2025/11/Robotech-medium-black-6.webp"
     ],
-    "specsText": "https://abdesai.mu/wp-content/uploads/2024/08/American-Tourister-ROBOTECH-Follow-your-Tomorrow.mp4 Robotech lets you pack in all you want with none of the fuss. This innovative collection features the unique 20:80 PlentiVol Packing System that allows you to efficiently organize and access your belongings while maximizing storage space, making packing and unpacking a breeze. It also comes in a range of attractive colors that will complement any look you’re going for. For the modern traveler seeking enhanced packing practicality with a dash of style, Robotech is your go-to companion. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar – American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we’re ready to go when you are with the gear that’s right for you! Double Wheels DUOSAF&#x2122; Security Zipper TSA Combi Lock Plentivol Maximum Volume Spinner Wheels Colour: Black Material: Polycarbonate Dimension: 67 x 45 x 29 cm Weight: 4.0 kg Interior with Multipocket and Packing Strap rPET & Antimicrobial Treated Lining Warranty: Limited 3 years international warranty https://abdesai.mu/wp-content/uploads/2024/08/vimeo-828228711-hls-akfire_interconnect_quic-1913.mp4 **"
+    "specsText": "https://abdesai.mu/wp-content/uploads/2024/08/American-Tourister-ROBOTECH-Follow-your-Tomorrow.mp4 Robotech lets you pack in all you want with none of the fuss. This innovative collection features the unique 20:80 PlentiVol Packing System that allows you to efficiently organize and access your belongings while maximizing storage space, making packing and unpacking a breeze. It also comes in a range of attractive colors that will complement any look you\u2019re going for. For the modern traveler seeking enhanced packing practicality with a dash of style, Robotech is your go-to companion. At American Tourister, we believe travel should be fun. We take pride in making stylish, high quality, and yeah, fun luggage that you can rely on. In 1933 Sol Koffler put his life savings on the line to start a luggage company in Providence, Rhode Island. His dream was to build a tough suitcase that could sell for a dollar \u2013 American Tourister was born. Now, many years later, American Tourister has become a large luggage global brand. Thanks to its continued tradition of quality and design at a great value, American Tourister is the smart choice for you and your family, offering a wide selection of travel products including luggage items as well as casual, and business bags. We understand how you travel, so we\u2019re ready to go when you are with the gear that\u2019s right for you! Double Wheels DUOSAF&#x2122; Security Zipper TSA Combi Lock Plentivol Maximum Volume Spinner Wheels Colour: Black Material: Polycarbonate Dimension: 67 x 45 x 29 cm Weight: 4.0 kg Interior with Multipocket and Packing Strap rPET & Antimicrobial Treated Lining Warranty: Limited 3 years international warranty https://abdesai.mu/wp-content/uploads/2024/08/vimeo-828228711-hls-akfire_interconnect_quic-1913.mp4 **"
   },
   {
     "id": 51946,
@@ -3100,7 +3100,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 18990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 2,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 2,000",
     "inStock": false,
     "permalink": "https://abdesai.mu/product/aerojoy-set-3-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/11/sa.jpg.webp",
@@ -3113,7 +3113,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/11/Aerojoy-L-Black-2.webp",
       "https://abdesai.mu/wp-content/uploads/2025/11/Aerojoy-Medium-Black-3.jpg"
     ],
-    "specsText": "The American Tourister Aerojoy is a popular line of hardside luggage known for being lightweight , durable, and having a modern design . It is constructed from tough Acrylonitrile Butadiene Styrene ( ABS ) material and features double spinner wheels for smooth mobility. Key Features and Material The Aerojoy collection is designed for travelers seeking a balance of durability, style, and functionality at a mid-range price point. Material : The exterior shell is made from ABS (Acrylonitrile Butadiene Styrene), a rigid material that provides good protection for your belongings, though it can be prone to scratches. Mobility : It features four double wheels that rotate 360 degrees, allowing for smooth and easy navigation through airports and hotels. Security : The luggage comes with an integrated TSA combination lock for added security and convenience during travel. Packing System : The interior features a multi-pocket design with a collapsible divider, cross-packing straps, and internal organizers to help keep items secure and tidy. Some versions are also expandable for extra packing capacity. Design : The collection offers a sleek, streamlined aesthetic and is available in a variety of colors, including black, navy, and forest green Warranty* : Limited 3 years Global Warranty against Manufacturer’s Defect"
+    "specsText": "The American Tourister Aerojoy is a popular line of hardside luggage known for being lightweight , durable, and having a modern design . It is constructed from tough Acrylonitrile Butadiene Styrene ( ABS ) material and features double spinner wheels for smooth mobility. Key Features and Material The Aerojoy collection is designed for travelers seeking a balance of durability, style, and functionality at a mid-range price point. Material : The exterior shell is made from ABS (Acrylonitrile Butadiene Styrene), a rigid material that provides good protection for your belongings, though it can be prone to scratches. Mobility : It features four double wheels that rotate 360 degrees, allowing for smooth and easy navigation through airports and hotels. Security : The luggage comes with an integrated TSA combination lock for added security and convenience during travel. Packing System : The interior features a multi-pocket design with a collapsible divider, cross-packing straps, and internal organizers to help keep items secure and tidy. Some versions are also expandable for extra packing capacity. Design : The collection offers a sleek, streamlined aesthetic and is available in a variety of colors, including black, navy, and forest green Warranty* : Limited 3 years Global Warranty against Manufacturer\u2019s Defect"
   },
   {
     "id": 51309,
@@ -3137,7 +3137,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Ellipso-Apricot-generic2-scaled-1.jpeg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Ellipso-Apricot-generic3-scaled-1.jpeg"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Tangerine Orange Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: Cabin-31 L / Medium- 68 L / Large- 112 L Weight: Cabin-2.7 Kg Medium-3.5 Kg Large-4.5 Kg Warranty: 3 Year Limited International Warranty Dimension(cms): Cabin : 55x 36.5 x 25.5 / Medium: 68 x 46.5 x 29.5/ Large: 79 x 54.5 x 34.5"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Tangerine Orange Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: Cabin-31 L / Medium- 68 L / Large- 112 L Weight: Cabin-2.7 Kg Medium-3.5 Kg Large-4.5 Kg Warranty: 3 Year Limited International Warranty Dimension(cms): Cabin : 55x 36.5 x 25.5 / Medium: 68 x 46.5 x 29.5/ Large: 79 x 54.5 x 34.5"
   },
   {
     "id": 51308,
@@ -3162,7 +3162,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-navyblue_4.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-navyblue_6.webp"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Tangerine Orange Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Tangerine Orange Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
   },
   {
     "id": 41301,
@@ -3184,7 +3184,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-medium-black_3.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-black_main.jpg"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: Cabin-31 L / Medium- 68 L / Large- 112 L Weight: Cabin-2.7 Kg Medium-3.5 Kg Large-4.5 Kg Warranty: 3 Year Limited International Warranty Dimension(cms): Cabin : 55x 36.5 x 25.5 / Medium: 68 x 46.5 x 29.5/ Large: 79 x 54.5 x 34.5"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: Cabin-31 L / Medium- 68 L / Large- 112 L Weight: Cabin-2.7 Kg Medium-3.5 Kg Large-4.5 Kg Warranty: 3 Year Limited International Warranty Dimension(cms): Cabin : 55x 36.5 x 25.5 / Medium: 68 x 46.5 x 29.5/ Large: 79 x 54.5 x 34.5"
   },
   {
     "id": 41303,
@@ -3207,7 +3207,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-medium-black_4.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-medium-black_5.jpg"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA Lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 68 L Weight: 3.5 Kg Dimension(cms): 68 x 46.5 x 29.5 Warranty: 3 Year Limited International Warranty"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA Lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 68 L Weight: 3.5 Kg Dimension(cms): 68 x 46.5 x 29.5 Warranty: 3 Year Limited International Warranty"
   },
   {
     "id": 41395,
@@ -3232,7 +3232,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-navyblue_4.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-navyblue_6.webp"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Brush Apricot Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Brush Apricot Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
   },
   {
     "id": 36067,
@@ -3255,7 +3255,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-black_6.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/ELLIPSO-large-black_5.jpg"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Black Spacious Interior TSA lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 112 L Weight: 4.5 Kg Dimension(cms): 79 x 54.5 x 34.5 Warranty: 3 Year Limited International Warranty"
   },
   {
     "id": 41394,
@@ -3276,7 +3276,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Ellipso-Apricot-generic2-scaled-1.jpeg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Ellipso-Apricot-generic1-scaled-1.jpeg"
     ],
-    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What’s more, Ellipso’s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Brush Apricot Spacious Interior TSA Lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 31 L Weight: 2.7 Kg Dimension(cms): 55x 36.5 x 25.5 Warranty: 3 Year Limited International Warranty"
+    "specsText": "Plan your next international trip with the American Tourister Ellipso! This polypropylene hard trolley bag with its sturdy build and 3-year international warranty is made for hassle-free travel. The flexi-plus handle ensures easy navigation, while the Pack Max interiors (laundry and shoe bag included) and dual packing straps are all about convenience. What\u2019s more, Ellipso\u2019s DuosafTM zipper, hidden pocket, and its impact resistant material make it one of the safest luggage out there! Ellipso offers an affordable Polypropylene suitcase with single wheels, a mounted TSA lock, scratch-resistant dual textures, and a new security feature: a hidden pocket beneath the hinge fabric for personal belongings. Colour: Brush Apricot Spacious Interior TSA Lock 360 Durable Wheels Organized Interiors Hidden Pocket Dual Saf Zipper Safety Bushes Cross Ribbon Telescopic Trolley Handle 3 Dial Combination Material: Polypropylene Volume: 31 L Weight: 2.7 Kg Dimension(cms): 55x 36.5 x 25.5 Warranty: 3 Year Limited International Warranty"
   },
   {
     "id": 36013,
@@ -3314,14 +3314,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 9990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-xl-mintgreen/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-XL-Greenmint-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-XL-Greenmint-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50420,
@@ -3334,14 +3334,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 8990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-m-mintgreen/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-M-Greenmint-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-M-Greenmint-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50419,
@@ -3354,14 +3354,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 7500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,500",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,500",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-c-mintgreen/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-C-Greenmint-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-C-Greenmint-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Mint Green Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50412,
@@ -3374,14 +3374,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 7500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,500",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,500",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-c-navyblue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-cabin-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-cabin-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50410,
@@ -3394,14 +3394,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 9990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-xl-navyblue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-large-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-large-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50409,
@@ -3414,14 +3414,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 9990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-xl-pinkbeige/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-PinkBeige-L-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-PinkBeige-L-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50404,
@@ -3434,14 +3434,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 7500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,500",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,500",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-c-pinkbeige/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-PinkBeige-C-1.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-PinkBeige-C-1.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Pink Beige Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Pink Beige Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50402,
@@ -3454,14 +3454,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 26480,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 9,490",
+    "promoBadge": "On Sale \u00b7 Save Rs 9,490",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-set3pcs-pinkbeige/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-pinkbeige-set3-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-pinkbeige-set3-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Pink Beige Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Pink Beige Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50400,
@@ -3474,14 +3474,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 26480,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 9,490",
+    "promoBadge": "On Sale \u00b7 Save Rs 9,490",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-set3pcs-navyblue/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-set3-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-navyblue-set3-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Navy Blue Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50398,
@@ -3494,14 +3494,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 26480,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 9,490",
+    "promoBadge": "On Sale \u00b7 Save Rs 9,490",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-set3pcs-greenmin/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-greenmint-set3-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-greenmint-set3-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Green/Mint Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Green/Mint Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50396,
@@ -3514,14 +3514,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 26480,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 9,490",
+    "promoBadge": "On Sale \u00b7 Save Rs 9,490",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-set3-blackgrey/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-set3-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-set3-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Cabin Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Medium Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L X-Large Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50394,
@@ -3534,14 +3534,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 9990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/kylette-xl-blackgrey/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-large-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-large-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 81x53x32.5 cm Weight: 4.8Kg Volume: 115L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50389,
@@ -3554,14 +3554,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 8990,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 990",
+    "promoBadge": "On Sale \u00b7 Save Rs 990",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/skylette-m-blackgrey/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-medium-1webp.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/Skylette-Blackgrey-medium-1webp.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 68.0 x 45.0 x 29.5 Weight: 4Kg Volume: 58L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 50377,
@@ -3574,14 +3574,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 7500,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,500",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,500",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/sklette-c-blackgrey/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/09/skylette-c-Black.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/09/skylette-c-Black.webp"
     ],
-    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette’s thoughtful design means you don’t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette’s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
+    "specsText": "Discover the new Skylette collection , designed for the modern traveler. Our innovative PlentiVol 20:80 packing system allows you to maximize packing efficiency, making your travel experience smoother than ever. The deep main compartment easily accommodates bulky items, such as shoe boxes, ensuring you can pack everything you need without hassle.A convenient smaller compartment allows for easy access to your personal items, so you can grab essentials on the go. Ideal for Small Spaces, Skylette\u2019s thoughtful design means you don\u2019t need to fully open the luggage, making it perfect for packing in tight hotel rooms. Travel with confidence thanks to the Skylette\u2019s double wheels, which provide smooth maneuverability. Equipped with the latest TSA008 lock and Duosaf Security Zippers, your belongings are secure while you enjoy your journey. Available in trendy dual colors. Skylette collection is your perfect travel companion, combining style and functionality. Material: ABS Colour: Black/grey Dimensions: 50 X 40 X 25 cm Weight: 3.1Kg Volume: 35L Warranty* : 3 years limited global warranty against manufacturers defect"
   },
   {
     "id": 49335,
@@ -3599,7 +3599,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/07/maxplusset3navyblue-main.webp"
     ],
-    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you’re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you’re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
+    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you\u2019re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you\u2019re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
   },
   {
     "id": 49325,
@@ -3621,7 +3621,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/07/Maxplus-set3-black-2.webp",
       "https://abdesai.mu/wp-content/uploads/2025/07/maxplusset3black-main.webp"
     ],
-    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you’re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you’re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
+    "specsText": "TSA Lock A TSA lock is a secure, travel-friendly locking mechanism that allows airport security to inspect your luggage without damaging the lock. Approved by the Transportation Security Administration, this lock ensures your belongings stay safe while providing convenience during travel, making it a must-have for peace of mind. 360-Degree Multidirectional Wheels Equipped with 360-degree multidirectional wheels, our products offer smooth and effortless maneuverability in any direction. Whether you\u2019re navigating tight spaces or making quick turns, these wheels provide optimal control and ease, making your travels more convenient and stress-free Scratch and Impact Resistant Material Scratch and impact-resistant material is built to withstand the rigors of travel. This durable material protects your bag from scuffs, scratches, and dents, ensuring it maintains a sleek appearance throughout your journey. Whether you\u2019re navigating crowded airports or handling rough baggage handling, this feature adds an extra layer of protection, keeping your luggage looking new and your belongings safe. RPET Material is Eco-Friendly as it is crafted from recycled plastic bottles. This sustainable fabric helps reduce waste and environmental impact while still offering durability and strength. Ideal for eco-conscious travelers, RPET luggage combines responsible production with high-quality performance, making it a great choice for those who want to travel sustainably without compromising on style or functionality. Functional Organised Interior With a functional organized interior makes packing and unpacking hassle-free. Multiple compartments, mesh pockets, and dividers help separate your clothing, accessories, and electronics, ensuring everything has its place. This organized structure prevents items from shifting during travel and keeps your belongings easily accessible. Ideal for travelers who value efficiency and want to stay organized on the go, a functional interior enhances your overall travel experience, making it easier to find and pack everything you need. Features Double Wheels, Mesh pocket Lock Standard TSA Lock Material Polypropylene Number of Wheels 4 Luggage Set Type Small, Medium & Large Luggage Size Sets Size (CM) 55, 69, 79 cm Luggage Type Hard Luggage Dimensions S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight Sml-2.7Kg / Med-3.5 Kg /Large-4.5Kg Material:100% Polypropylene Volume:-SML-31L MED-68L LRG-112L Dimensions:-S-55cmX37cmx23cmv/M-69cm X 47cm X 29cm / L-79cm X 56cm X 34cm Weight:Sml-2.7Kg / Med-3.5 Kg Large-4.5Kg Double wheels: Yes TSA Combination Lock: Yes Cross Packing Strap: Yes Mesh Pocket: Yes/Drop Pocket: Yes Internal organiser : Yes Warranty: Limited 3 Years Warranty **"
   },
   {
     "id": 47807,
@@ -3643,15 +3643,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 47806,
-    "name": "AMERICAN TOURISTER Bricklane Dark Forest 69cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Dark Forest 69cm",
     "slug": "american-tourister-bricklane-dark-forest-69cm",
     "sku": "Bricklane M A DkFo",
     "series": "Bricklane",
     "sizeCategory": "Medium",
     "priceRs": 7500,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-dark-forest-69cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/08/Bricklane-FoGrn-Medium.jpg",
@@ -3680,15 +3680,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 47809,
-    "name": "AMERICAN TOURISTER Bricklane Dark Shadow 69cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Dark Shadow 69cm",
     "slug": "american-tourister-bricklane-dark-shadow-69cm",
     "sku": "Bricklane M A DSha",
     "series": "Bricklane",
     "sizeCategory": "Medium",
     "priceRs": 7500,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-dark-shadow-69cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/05/Bricklane-Dark-Shadow-Medium.jpg",
@@ -3796,7 +3796,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2860,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 210",
+    "promoBadge": "On Sale \u00b7 Save Rs 210",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-cosmo-duffle-bag-with-wheels-red-55cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/03/cosmo-red-55-main.webp",
@@ -3821,14 +3821,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2800,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,400",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,400",
     "inStock": false,
     "permalink": "https://abdesai.mu/product/american-tourister-backpack-slate-navy/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/03/Slatenavy-main.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2025/03/Slatenavy-main.webp"
     ],
-    "specsText": "Let the kids enjoy the after-school activities in style. The Kids SWAGPACK Collection by American Tourister is a combination of thoughtful design and fun elements. From 3D hood covers for the younger pnes to peppy designs for the budding school goers, every detail makes it a must have for kids. The Kids Bag 2 Collection fills up the need for a trusted companion in grand style. Whether it is the name tag, carefully designed compartments, or mesh padded shoulder straps, making the school day joyful has never been easier. Colour: Navy Material: 100% Polyester Volume: 34 Dimension: 32 × 23 × 47 cm Weight: 0 .5 kg **"
+    "specsText": "Let the kids enjoy the after-school activities in style. The Kids SWAGPACK Collection by American Tourister is a combination of thoughtful design and fun elements. From 3D hood covers for the younger pnes to peppy designs for the budding school goers, every detail makes it a must have for kids. The Kids Bag 2 Collection fills up the need for a trusted companion in grand style. Whether it is the name tag, carefully designed compartments, or mesh padded shoulder straps, making the school day joyful has never been easier. Colour: Navy Material: 100% Polyester Volume: 34 Dimension: 32 \u00d7 23 \u00d7 47 cm Weight: 0 .5 kg **"
   },
   {
     "id": 45415,
@@ -3841,7 +3841,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2800,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,400",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,400",
     "inStock": false,
     "permalink": "https://abdesai.mu/product/american-tourister-backpack-sest-2-0-orange/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Orange-LU8096001_1.jpg.webp",
@@ -3853,7 +3853,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Orange-1.jpg.webp",
       "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Orange-5.jpg.webp"
     ],
-    "specsText": "Bring the zest back to your life with the American Tourister Sest 2.0! Made with Dobby polyester RecyclexTM material, this range of Pop Packs offers maximum comfort without compromising on style. Funky exteriors are complemented by Ergo-on-the-go back, sternum and shoulders, a front organizer and a side bottle pocket. What’s more, Sest 2.0 backpacks come with 3 full compartments and a whopping 28-litres volume! Warranty: Limited 1 year international warranty Model: Backpack 02 Material: POLYESTER Colour: orange Dimensions: Length-30.5cm x Width-22cm x Height-46.5cm Weight:410g *Size/Volume are approximate and subject to change"
+    "specsText": "Bring the zest back to your life with the American Tourister Sest 2.0! Made with Dobby polyester RecyclexTM material, this range of Pop Packs offers maximum comfort without compromising on style. Funky exteriors are complemented by Ergo-on-the-go back, sternum and shoulders, a front organizer and a side bottle pocket. What\u2019s more, Sest 2.0 backpacks come with 3 full compartments and a whopping 28-litres volume! Warranty: Limited 1 year international warranty Model: Backpack 02 Material: POLYESTER Colour: orange Dimensions: Length-30.5cm x Width-22cm x Height-46.5cm Weight:410g *Size/Volume are approximate and subject to change"
   },
   {
     "id": 45411,
@@ -3866,7 +3866,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2800,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,400",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,400",
     "inStock": false,
     "permalink": "https://abdesai.mu/product/american-tourister-backpack-sest-2-0-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Blk-LU8-09001-MAIN.webp",
@@ -3875,7 +3875,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Blk-LU8-09001-1.webp",
       "https://abdesai.mu/wp-content/uploads/2025/03/Sest-Blk-LU8-09001-2.webp"
     ],
-    "specsText": "Bring the zest back to your life with the American Tourister Sest 2.0! Made with Dobby polyester RecyclexTM material, this range of Pop Packs offers maximum comfort without compromising on style. Funky exteriors are complemented by Ergo-on-the-go back, sternum and shoulders, a front organizer and a side bottle pocket. What’s more, Sest 2.0 backpacks come with 3 full compartments and a whopping 28-litres volume! Warranty: Limited 1 year international warranty Model: Backpack 02 Material: POLYESTER Colour: black Dimensions: Length-30.5cm x Width-22cm x Height-46.5cm Weight:410g *Size/Volume are approximate and subject to change"
+    "specsText": "Bring the zest back to your life with the American Tourister Sest 2.0! Made with Dobby polyester RecyclexTM material, this range of Pop Packs offers maximum comfort without compromising on style. Funky exteriors are complemented by Ergo-on-the-go back, sternum and shoulders, a front organizer and a side bottle pocket. What\u2019s more, Sest 2.0 backpacks come with 3 full compartments and a whopping 28-litres volume! Warranty: Limited 1 year international warranty Model: Backpack 02 Material: POLYESTER Colour: black Dimensions: Length-30.5cm x Width-22cm x Height-46.5cm Weight:410g *Size/Volume are approximate and subject to change"
   },
   {
     "id": 43904,
@@ -3960,7 +3960,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 13000,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 4,010",
+    "promoBadge": "On Sale \u00b7 Save Rs 4,010",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-frontec-medium-frozen-matcha/",
     "image": "https://abdesai.mu/wp-content/uploads/2025/02/Frontec-Matcha-M-main.jpg",
@@ -3973,7 +3973,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2025/02/Frontec-Generic-7.jpg",
       "https://abdesai.mu/wp-content/uploads/2025/02/Frontec-Generic-6.jpg"
     ],
-    "specsText": "Get ready to embark on your next adventure in style with the all-new American Tourister Frontec! Frontec, our best-selling luggage with its unique book opening feature, has always been a game-changer in the world of travel. Also taking it up a notch by merging the Optimov&#x2122; Shock absorbing wheels with the innovative StePause&#x2122; technology to ensure a smooth and hassle-free journey. In the cabin size, the TSA lock have been upgraded to include USB Type A and Type C feature allowing you to charge your devices on the go. Now, let’s talk about colors! It’s important to express unique styles, which is why a range of key colors have been curated for selection. From the trendy color of year, Apricot Blue, to the refreshing Matcha and the timeless Elemental Blue, there’s something for everyone. Make a statement and stand out from the crowd with Frontec! PlentiVol&#x2122; ultimate volume split accommodates flexible packing and maximises the packing volume by 15% on average. The front access top opening allows you to get access to the main compartment, while the Optimov&#x2122; Shock Absorbing Wheels enhances smooth rolling on bumpy surfaces. Start your new travel journey with our FRONTEC&#x2122; and experience the beauty and fun of this great suitcase! Colour: Matcha Material: Polycarbonate Volume: 77 L/88L(expanded) Dimension: 68.0 x 31.0 x 46.0 cm Expandable: 35cm Weight: 4 .2 kg Warranty 3 years Limited Global Warranty"
+    "specsText": "Get ready to embark on your next adventure in style with the all-new American Tourister Frontec! Frontec, our best-selling luggage with its unique book opening feature, has always been a game-changer in the world of travel. Also taking it up a notch by merging the Optimov&#x2122; Shock absorbing wheels with the innovative StePause&#x2122; technology to ensure a smooth and hassle-free journey. In the cabin size, the TSA lock have been upgraded to include USB Type A and Type C feature allowing you to charge your devices on the go. Now, let\u2019s talk about colors! It\u2019s important to express unique styles, which is why a range of key colors have been curated for selection. From the trendy color of year, Apricot Blue, to the refreshing Matcha and the timeless Elemental Blue, there\u2019s something for everyone. Make a statement and stand out from the crowd with Frontec! PlentiVol&#x2122; ultimate volume split accommodates flexible packing and maximises the packing volume by 15% on average. The front access top opening allows you to get access to the main compartment, while the Optimov&#x2122; Shock Absorbing Wheels enhances smooth rolling on bumpy surfaces. Start your new travel journey with our FRONTEC&#x2122; and experience the beauty and fun of this great suitcase! Colour: Matcha Material: Polycarbonate Volume: 77 L/88L(expanded) Dimension: 68.0 x 31.0 x 46.0 cm Expandable: 35cm Weight: 4 .2 kg Warranty 3 years Limited Global Warranty"
   },
   {
     "id": 41106,
@@ -3986,7 +3986,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 8000,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,000",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,000",
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-skypark-medium-black/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/Skypark-med-Blk-main.jpg",
@@ -3996,7 +3996,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/Skypark-black-generic-2.jpg",
       "https://abdesai.mu/wp-content/uploads/2024/11/Skypark-black-generic-3.webp"
     ],
-    "specsText": "The classic linear grooves makes SKY PARK a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. MATERIAL: 100% ABS FIXED COMBINATION LOCK SCRATCH AND IMPACT RESISTANT MATERIAL 360° SPINNER WHEELS TO ENSURE SMOOTH ROLLING COMFORT LARGE INTERIOR PACKING VOLUME DUAL PACKING STRAPS FOR CONVINIENT PACKING Warranty: Limited 3 year global warranty Medium(cm): 66 x 45 x 28 Vol:77L / 3.5Kg **"
+    "specsText": "The classic linear grooves makes SKY PARK a perfect bag to go with your every trip and style. This collection is built on sturdy platform with single wheels, and easy packing interior that suits the basic needs of all travelers. MATERIAL: 100% ABS FIXED COMBINATION LOCK SCRATCH AND IMPACT RESISTANT MATERIAL 360\u00b0 SPINNER WHEELS TO ENSURE SMOOTH ROLLING COMFORT LARGE INTERIOR PACKING VOLUME DUAL PACKING STRAPS FOR CONVINIENT PACKING Warranty: Limited 3 year global warranty Medium(cm): 66 x 45 x 28 Vol:77L / 3.5Kg **"
   },
   {
     "id": 41102,
@@ -4018,15 +4018,15 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 41101,
-    "name": "AMERICAN TOURISTER Bricklane Oxford Blue 69cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Oxford Blue 69cm",
     "slug": "american-tourister-bricklane-oxford-blue-69cm",
     "sku": "Bricklane M A OxBlu",
     "series": "Bricklane",
     "sizeCategory": "Medium",
     "priceRs": 7500,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-oxford-blue-69cm/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/bricklane-OX-BLUE-medium.jpg",
@@ -4037,7 +4037,7 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
   },
   {
     "id": 29014,
-    "name": "AMERICAN TOURISTER Backpack Mate 2.0 Gold Yellow – Mate LC2(*)06002",
+    "name": "AMERICAN TOURISTER Backpack Mate 2.0 Gold Yellow \u2013 Mate LC2(*)06002",
     "slug": "atb261",
     "sku": "Mate LC2(*)06002",
     "series": "Backpacks & Briefcases",
@@ -4046,14 +4046,14 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
     "regularPriceRs": 2800,
     "onSale": true,
     "hasPromo": true,
-    "promoBadge": "On Sale · Save Rs 1,400",
+    "promoBadge": "On Sale \u00b7 Save Rs 1,400",
     "inStock": false,
     "permalink": "https://abdesai.mu/product/atb261/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/ATB261-main.webp",
     "gallery": [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATB261-main.webp"
     ],
-    "specsText": "A youthful and functional backpack for casual daily use. This convenient backpack offers spacious volume, padded back and shoulder straps that offer a comfortable fit. Rain cover provides an extra layer of protection safeguarding your valuables during the toughest weather conditions. Features This convenient backpack offers spacious volume, padded back, and shoulder straps that offer a comfortable fit. Material: 100% Polyester Volume: 30L Dimension: 48 × 33 × 22 cm Weight: 0.5 kg Warranty : Limited One year International Warranty **Actual colours and design may vary slightly, due to different device screen settings, the lighting in the installation location, slight differences in product finishes over time and other factors. For the ultimate comfort and just as trendy for your kids. With 2 full compartments and one half compartment, along with a name tag, padded shoulder strap and back padding for more comfort."
+    "specsText": "A youthful and functional backpack for casual daily use. This convenient backpack offers spacious volume, padded back and shoulder straps that offer a comfortable fit. Rain cover provides an extra layer of protection safeguarding your valuables during the toughest weather conditions. Features This convenient backpack offers spacious volume, padded back, and shoulder straps that offer a comfortable fit. Material: 100% Polyester Volume: 30L Dimension: 48 \u00d7 33 \u00d7 22 cm Weight: 0.5 kg Warranty : Limited One year International Warranty **Actual colours and design may vary slightly, due to different device screen settings, the lighting in the installation location, slight differences in product finishes over time and other factors. For the ultimate comfort and just as trendy for your kids. With 2 full compartments and one half compartment, along with a name tag, padded shoulder strap and back padding for more comfort."
   },
   {
     "id": 23428,
@@ -4072,19 +4072,19 @@ export const INITIAL_ABDESAI_PRODUCTS: AbDesaiATProduct[] = [
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD012-Duncan-Purple-Medium-main.webp",
       "https://abdesai.mu/wp-content/uploads/2024/11/ATD010-Duncan-Purple-Set-main.webp"
     ],
-    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you’ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Purple Material: POLYESTER Volume: 85L Dimension: 68 × 42 × 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
+    "specsText": "Travel in comfort and style with the American Tourister Duncan 3PCS Spinner Set in black. This lightweight, soft-sided suitcase boasts convenient features for easy packing and organization. Material : Crafted from rich cuzy fabric with dobby trims. Warranty : Enjoy 3 years of international warranty. Lock : Features a fixed 3-digit combination lock for security. Pockets : Equipped with two front pockets for convenient storage. Organization : Inside, you\u2019ll find a convi-pack divider to keep your belongings organized. Handles : The soft grip top and side handles are rivet-free for comfort. American Tourister Duncan soft luggage has all the features you need for easy traveling. Featuring an inside mesh pocket for travel accessories, Packing straps for ease in packing, Push button trolley for ease in height adjustment. The modern, textured design will help it stand out from the crown in baggage claim. Made of tough cuzy fabric,Fixed Combination lock for security,Push button trolley for ease in height adjustment,Soft handles for comfortable grip,Attractive color combination,Recessed wheels/top handle,Quick hook on front pocket Features Colour: Purple Material: POLYESTER Volume: 85L Dimension: 68 \u00d7 42 \u00d7 30 cm Expandable: EXPANDABLE Weight: 3 kg 3 years limited global warranty in more than 120 countries"
   },
   {
     "id": 22451,
-    "name": "AMERICAN TOURISTER Bricklane Black 69cm ( Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin ) )",
+    "name": "AMERICAN TOURISTER Bricklane Black 69cm",
     "slug": "american-tourister-bricklane-black-69cm-atb229",
     "sku": "Bricklane M A JBlk",
     "series": "Bricklane",
     "sizeCategory": "Medium",
     "priceRs": 7500,
     "onSale": false,
-    "hasPromo": true,
-    "promoBadge": "Promo: Get 1 Cabin at Half Price (+Rs 2,250)",
+    "hasPromo": false,
+    "promoBadge": null,
     "inStock": true,
     "permalink": "https://abdesai.mu/product/american-tourister-bricklane-black-69cm-atb229/",
     "image": "https://abdesai.mu/wp-content/uploads/2024/11/ATB229-Bricklane-69cm-Black-main.webp",
@@ -4145,22 +4145,22 @@ export function formatRs(amount: number): string {
 
 // 16 Core Promotional Offers from abdesai.mu for quick Shelf Talker printing
 export const CORE_16_PROMO_IDS: number[] = [
-  56981, // Jamaica Medium 3 pcs as per colour available — Rs 11,990 (Save Rs 5,980)
-  56926, // Jamaica Cabin + Large Navy Blue — Rs 9,000 (Save Rs 3,300)
-  56975, // Skytrac Cabin 2-Unit Offer — Rs 8,250 (2nd at 50% OFF)
-  56974, // Skytrac Medium 2-Unit Offer — Rs 10,500 (2nd at 50% OFF)
-  56973, // Skytrac Large 2-Unit Offer — Rs 12,000 (2nd at 50% OFF)
-  56701, // Skytrac Set of 3 Sunshine Yellow — Rs 15,990 (Save Rs 4,510)
-  56272, // Bricklane 80cm Black (+ Cabin at 50% OFF Rs 2,250) — Rs 8,000
-  22451, // Bricklane 69cm Black (+ Cabin at 50% OFF Rs 2,250) — Rs 7,500
+  48101, // Skytrac Set of 3 Sunshine Yellow — Rs 15,990 (Save Rs 4,510)
+  50396, // Skylette Set of 3 Black Grey — Rs 16,990 (Save Rs 9,490)
   55858, // Dashway Set of 3 Orange Grey — Rs 16,500 (Save Rs 1,790)
   55956, // Duncan Set of 3 Purple — Rs 16,500 (Save Rs 1,790)
   55939, // Mystic Set of 3 Blue — Rs 14,990 (Save Rs 2,010)
-  50396, // Skylette Set of 3 Black Grey — Rs 16,990 (Save Rs 9,490)
-  55925, // Gemina Pro L Black + Free 950ml Copper Bottle — Rs 9,495
-  47875, // Novastream Large Navy Blue + Free RICO Travel Rice Cooker — Rs 13,000
-  52138, // Aerospin XL Stone Basalt + Free Baseus Powerbank — Rs 9,000
-  56522, // Dash Pop Cabin + Medium Black — Rs 15,990
+  51946, // Aerojoy Set of 3 Black — Rs 16,990 (Save Rs 2,000)
+  55872, // Gemina PRO L Black — Rs 9,495 (On Sale · Save Rs 2,495)
+  43778, // Frontec Medium Frozen Matcha — Rs 8,990 (On Sale · Save Rs 4,010)
+  52065, // Robotech Medium Dark Green — Rs 12,500 (On Sale · Save Rs 2,000)
+  41106, // Skypark Medium Black — Rs 7,000 (On Sale · Save Rs 1,000)
+  50377, // Skylette Cabin Black Grey — Rs 6,000 (On Sale · Save Rs 1,500)
+  50389, // Skylette Medium Black Grey — Rs 8,000 (On Sale · Save Rs 990)
+  50394, // Skylette X-Large Black Grey — Rs 9,000 (On Sale · Save Rs 990)
+  52895, // Bass Rolling Tote Black — Rs 6,990 (On Sale · Save Rs 3,000)
+  52886, // Segno Briefcase Black — Rs 4,990 (On Sale · Save Rs 1,000)
+  45411, // Backpack Sest 2.0 Black — Rs 1,400 (On Sale · Save Rs 1,400)
 ];
 
 export function extractSeriesOverview(

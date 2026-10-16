@@ -107,13 +107,20 @@ function detectSizeCategory(name: string, onSale = true): string {
 }
 
 function cleanExpiredPromoTitle(rawName: string, onSale: boolean): string {
-  if (!onSale && /buy\s*one\s*get\s*one\s*free/i.test(rawName)) {
-    return rawName
+  let cleaned = rawName;
+  if (!onSale && /buy\s*one\s*get\s*one\s*free/i.test(cleaned)) {
+    cleaned = cleaned
       .replace(/\s*Rs\s*\d+\s*each\s*[–—-]\s*Buy\s*One\s*Get\s*One\s*Free[\s\S]*$/i, '')
       .replace(/\s*[–—-]\s*Buy\s*One\s*Get\s*One\s*Free[\s\S]*$/i, '')
       .trim();
   }
-  return rawName;
+  // Clean concluded 15 October companion giveaways and BOGO offers
+  cleaned = cleaned
+    .replace(/\s*\+\s*Free RICO.*?worth Rs\s*\d+/gi, '')
+    .replace(/\s*with\s+Free\s+950Ml\s+Copper\s+Bottle.*?worth Rs\s*\d+\.?/gi, '')
+    .replace(/\s*\(\s*Get 1 Cabin worth Rs 4500 at half price.*?for the Cabin \)\s*\)/gi, '')
+    .trim();
+  return cleaned;
 }
 
 function resolvePriceAndPromo(p: any, name: string, rawDesc = '') {
@@ -148,63 +155,58 @@ function resolvePriceAndPromo(p: any, name: string, rawDesc = '') {
     };
   }
 
-  // 2. Skytrac "Buy one ... Get the second one in any colour same size at half price ... Total for 2 [Size] Rs X"
+  // 2. Skytrac "Buy one ... Get the second one in any colour same size at half price" (Concluded 15 Oct)
   if (/get\s+the\s+second\s+one\s+.*?\s+at\s+half\s+price/i.test(name)) {
-    const saveMatch = name.match(/SAVE\s*Rs\s*([\d,]+)/i);
     return {
       priceRs: rawPriceRs,
-      regularPriceRs: rawRegularRs > rawPriceRs ? rawRegularRs : undefined,
-      onSale: true,
-      hasPromo: true,
-      promoBadge: saveMatch
-        ? `Buy 1 Get 2nd at 50% Off (Price for 2 · Save Rs ${Number(
-            saveMatch[1].replace(/,/g, '')
-          ).toLocaleString('en-MU')})`
-        : 'Buy 1 Get 2nd at 50% Off (Price for 2 Units)',
+      regularPriceRs: undefined,
+      onSale: false,
+      hasPromo: false,
+      promoBadge: undefined,
     };
   }
 
-  // 3. Bricklane 69cm / 80cm ("Get 1 Cabin worth Rs 4500 at half price (Pay Rs 2250 for the Cabin)")
+  // 3. Bricklane 69cm / 80cm ("Get 1 Cabin worth Rs 4500 at half price" — Concluded 15 Oct)
   if (/get\s+1\s+cabin\s+worth\s+rs\s*4500\s+at\s+half\s+price/i.test(name)) {
     return {
       priceRs: rawPriceRs,
       regularPriceRs: undefined,
       onSale: false,
-      hasPromo: true,
-      promoBadge: 'Promo: Get 1 Cabin at Half Price (+Rs 2,250)',
+      hasPromo: false,
+      promoBadge: undefined,
     };
   }
 
-  // 4. Free 950ml Copper Bottle (Gemina PRO L)
-  if (/free\s+950ml\s+copper\s+bottle/i.test(name)) {
+  // 4. Gemina PRO L (Free Copper Bottle ended 15 Oct, but item remains on sale at Rs 9,495, was Rs 11,990)
+  if (/gemina.*?\bl\b/i.test(name) || /free\s+950ml\s+copper\s+bottle/i.test(name)) {
     return {
-      priceRs: rawPriceRs,
-      regularPriceRs: p.on_sale && rawRegularRs > rawPriceRs ? rawRegularRs : undefined,
-      onSale: Boolean(p.on_sale),
+      priceRs: 9495,
+      regularPriceRs: 11990,
+      onSale: true,
       hasPromo: true,
-      promoBadge: 'Save Rs 2,495 + Free 950ml Copper Bottle',
+      promoBadge: 'On Sale · Save Rs 2,495',
     };
   }
 
-  // 5. Free RICO Travel Rice Cooker (Novastream Medium & Large)
+  // 5. Novastream Medium & Large (Free RICO Travel Rice Cooker ended 15 Oct)
   if (/free\s+rico.*rice\s+cooker/i.test(name)) {
     return {
       priceRs: rawPriceRs,
-      regularPriceRs: p.on_sale && rawRegularRs > rawPriceRs ? rawRegularRs : undefined,
-      onSale: Boolean(p.on_sale),
-      hasPromo: true,
-      promoBadge: 'Free RICO Travel Rice Cooker (Worth Rs 1,390)',
+      regularPriceRs: undefined,
+      onSale: false,
+      hasPromo: false,
+      promoBadge: undefined,
     };
   }
 
-  // 5b. Free Baseus Powerbank in description (e.g. Aerospin XL Stone Basalt on abdesai.mu)
+  // 5b. Aerospin XL (Free Baseus Powerbank ended 15 Oct)
   if (/free\s+baseus\s+powerbank\s+worth\s+rs\s*1290/i.test(combinedText)) {
     return {
       priceRs: rawPriceRs,
-      regularPriceRs: p.on_sale && rawRegularRs > rawPriceRs ? rawRegularRs : undefined,
-      onSale: Boolean(p.on_sale),
-      hasPromo: true,
-      promoBadge: 'Free Baseus Powerbank (Worth Rs 1,290)',
+      regularPriceRs: undefined,
+      onSale: false,
+      hasPromo: false,
+      promoBadge: undefined,
     };
   }
 
@@ -589,10 +591,34 @@ async function fetchLiveAbDesaiCatalog() {
     };
   });
 
+  // Merge live updates into our full showroom catalog so all American Tourister models remain available
+  const liveById = new Map<number, any>(normalized.map((p) => [Number(p.id), p]));
+  const mergedCatalog = INITIAL_ABDESAI_PRODUCTS.map((baseItem) => {
+    const liveItem = liveById.get(Number(baseItem.id));
+    if (!liveItem) return baseItem;
+    return {
+      ...baseItem,
+      priceRs: liveItem.priceRs,
+      regularPriceRs: liveItem.regularPriceRs,
+      onSale: liveItem.onSale,
+      hasPromo: liveItem.hasPromo,
+      promoBadge: liveItem.promoBadge,
+      inStock: liveItem.inStock,
+    };
+  });
+
+  // Also include any newly discovered products published on abdesai.mu
+  const existingIds = new Set(INITIAL_ABDESAI_PRODUCTS.map((p) => Number(p.id)));
+  for (const item of normalized) {
+    if (!existingIds.has(Number(item.id))) {
+      mergedCatalog.push(item);
+    }
+  }
+
   const nowIso = new Date().toISOString();
   const detectedEvents = diffCatalogSnapshots(
     cachedCatalog,
-    normalized,
+    mergedCatalog,
     nowIso
   );
   if (detectedEvents.length > 0) {
@@ -603,10 +629,10 @@ async function fetchLiveAbDesaiCatalog() {
     savePersistedChanges(catalogChangeHistory);
   }
 
-  cachedCatalog = normalized;
+  cachedCatalog = mergedCatalog;
   lastSyncIso = nowIso;
   return {
-    products: normalized,
+    products: mergedCatalog,
     syncedAt: lastSyncIso,
     newEvents: detectedEvents,
     changeHistory: catalogChangeHistory,

@@ -204,26 +204,7 @@ function getPromoCompanionVisual(
     };
   }
 
-  if (/free\s+950ml\s+copper\s+bottle/i.test(n)) {
-    return {
-      type: 'free-gift',
-      companionImage: 'https://abdesai.mu/wp-content/uploads/2026/09/Dv30.webp',
-      companionTitle: '950ml Copper Bottle',
-      companionBadge: 'FREE GIFT (RS 1,395)!',
-      companionPriceNote: 'INCLUDED 100% FREE!',
-    };
-  }
 
-  if (/free\s+rico.*rice\s+cooker/i.test(n)) {
-    return {
-      type: 'free-gift',
-      companionImage:
-        'https://abdesai.mu/wp-content/uploads/2026/09/RC2607-4.jpg',
-      companionTitle: 'RICO Travel Rice Cooker',
-      companionBadge: 'FREE GIFT (RS 1,390)!',
-      companionPriceNote: 'INCLUDED 100% FREE!',
-    };
-  }
 
   if (item.series === 'Skytrac' && /get the second one .* at half price/i.test(n)) {
     const secondImg =
@@ -324,42 +305,16 @@ function buildHighImpactRetailCopy(
     };
   }
 
-  if (/free\s+950ml\s+copper\s+bottle/i.test(n)) {
+  if (item.series === 'Gemina Pro' && (item.onSale || /gemina.*?\bl\b/i.test(n))) {
     return {
       shortTitle,
-      hookHeadline: `${specs.sizeHeaderBadge} · SAVE RS 2,495 + FREE GIFT!`,
+      hookHeadline: `${specs.sizeHeaderBadge} · SAVE RS 2,495!`,
       bullets: [
-        `Includes FREE DrCopper 950ml Pure Copper Bottle (Worth Rs 1,395)!`,
+        `Official American Tourister Gemina Pro Large Spinner`,
         `${specs.material} · ${specs.wheels} · ${specs.lock}`,
       ],
-      saveBannerText: `TOTAL VALUE SAVED: RS 3,890!`,
-      urgencySubtext: `RS 2,495 OFF + FREE RS 1,395 COPPER BOTTLE WHILE STOCKS LAST!`,
-    };
-  }
-
-  if (/free\s+rico.*rice\s+cooker/i.test(n)) {
-    return {
-      shortTitle,
-      hookHeadline: `${specs.sizeHeaderBadge} · FREE RICE COOKER (RS 1,390)!`,
-      bullets: [
-        `Take home a FREE RICO RC2607 Travel Rice Cooker (Worth Rs 1,390)!`,
-        `${specs.material} · ${specs.wheels} · ${specs.lock}`,
-      ],
-      saveBannerText: `FREE RS 1,390 TRAVEL RICE COOKER!`,
-      urgencySubtext: `COMPLIMENTARY RICO TRAVEL RICE COOKER WITH EVERY PURCHASE!`,
-    };
-  }
-
-  if (/baseus\s+powerbank/i.test(`${n} ${item.specsText || ''} ${item.promoBadge || ''}`)) {
-    return {
-      shortTitle,
-      hookHeadline: `${specs.sizeHeaderBadge} · FREE POWERBANK (RS 1,290)!`,
-      bullets: [
-        `Includes FREE Baseus Powerbank (Worth Rs 1,290) as listed on abdesai.mu!`,
-        `${specs.material} · ${specs.wheels} · ${specs.lock}`,
-      ],
-      saveBannerText: `FREE RS 1,290 BASEUS POWERBANK!`,
-      urgencySubtext: `ULTRA-LIGHT 2.8KG XL + FREE BASEUS POWERBANK WHILE STOCKS LAST!`,
+      saveBannerText: `SPECIAL SALE PRICE: RS 9,495 (WAS RS 11,990)!`,
+      urgencySubtext: `CONFIRM AVAILABILITY BEFORE PAYMENT · DELIVERY UP TO 10 DAYS`,
     };
   }
 

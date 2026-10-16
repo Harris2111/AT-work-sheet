@@ -324,7 +324,7 @@ export default function App() {
                   permalink: nextItem.permalink,
                   newPriceRs: nextItem.priceRs,
                   newRegularPriceRs: nextItem.regularPriceRs,
-                  newPromoBadge: nextItem.promoBadge,
+                  newPromoBadge: nextItem.promoBadge || undefined,
                   newInStock: nextItem.inStock,
                   summary: `NEW PRODUCT ADDED on abdesai.mu: ${nextItem.name} (${nextItem.series} · ${nextItem.sizeCategory}) at ${formatRs(
                     nextItem.priceRs
@@ -532,20 +532,23 @@ export default function App() {
   // All Featured Promo Slides from abdesai.mu (Rotates automatically every 15 seconds)
   const heroPromoItems = useMemo(() => {
     const curatedPromoIds = [
-      56981, // Jamaica Medium 3 pcs (3 × Medium at Rs 11,990, Was Rs 17,970)
-      56513, // Jamaica Cabin + Large Navy Blue (Rs 9,000, Was Rs 12,300)
-      56583, // Skytrac Large Offer (2 Units at Rs 12,000)
-      56584, // Skytrac Medium Offer (2 Units at Rs 10,500)
-      56582, // Skytrac Cabin Offer (2 Units at Rs 8,250)
-      41271, // Skytrac Set of 3 Navy (Rs 15,990)
-      50400, // Skylette Set 3pcs Navy Blue (Rs 16,990)
-      55860, // Dashway Set 3 Grey Black (Rs 16,500)
-      50787, // Duncan Set of 3 Navy Blue (Rs 16,500)
-      56265, // Mystic Set of 3 Blue (Rs 14,990)
-      55872, // Gemina PRO L Black + Free Copper Bottle (Rs 9,495)
-      47874, // Novastream Medium + Free RICO Rice Cooker (Rs 10,990)
-      47808, // Bricklane 80cm + Get 1 Cabin at Half Price (Rs 8,000)
-      52138, // Aerospin XL Stone Basalt + Free Baseus Powerbank (Rs 9,000)
+      48101, // Skytrac Set of 3 Sunshine Yellow (Rs 15,990 · Save Rs 4,510)
+      41271, // Skytrac Set of 3 Navy (Rs 15,990 · Save Rs 4,510)
+      50396, // Skylette Set of 3 Black Grey (Rs 16,990 · Save Rs 9,490)
+      50400, // Skylette Set 3pcs Navy Blue (Rs 16,990 · Save Rs 9,490)
+      55858, // Dashway Set 3 Orange Grey (Rs 16,500 · Save Rs 1,790)
+      55860, // Dashway Set 3 Grey Black (Rs 16,500 · Save Rs 1,790)
+      55956, // Duncan Set of 3 Purple (Rs 16,500 · Save Rs 1,790)
+      50787, // Duncan Set of 3 Navy Blue (Rs 16,500 · Save Rs 1,790)
+      55939, // Mystic Set of 3 Blue (Rs 14,990 · Save Rs 2,010)
+      51946, // Aerojoy Set of 3 Black (Rs 16,990 · Save Rs 2,000)
+      55872, // Gemina PRO L Black on Sale (Rs 9,495 · Save Rs 2,495)
+      43778, // Frontec Medium Matcha on Sale (Rs 8,990 · Save Rs 4,010)
+      52065, // Robotech Medium Dark Green on Sale (Rs 12,500 · Save Rs 2,000)
+      41106, // Skypark Medium Black on Sale (Rs 7,000 · Save Rs 1,000)
+      50377, // Skylette Cabin Black Grey on Sale (Rs 6,000 · Save Rs 1,500)
+      45411, // Backpack Sest 2.0 Black on Sale (Rs 1,400 · Save Rs 1,400)
+      52895, // Bass Rolling Tote Black on Sale (Rs 6,990 · Save Rs 3,000)
     ];
     const matched = curatedPromoIds
       .map((id) => products.find((p) => p.id === id && p.hasPromo))

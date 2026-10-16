@@ -106,7 +106,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
   // Ready-to-paste WhatsApp Status Caption
   const whatsappStatusCaption =
     templateMode === 'store-showcase'
-      ? `🧳 *A.B. DESAI MAURITIUS — OFFICIAL AMERICAN TOURISTER STORE*\n🔥 Jamaica 3× Medium Set: Rs 11,400 · Cabin+XL: Rs 9,000 · Skytrac 2nd at 50% OFF · Bricklane Cabin 50% OFF!\n📍 Port-Louis · Tribeca · Trianon · Bagatelle · Cascavelle · Rose-Belle\n📲 WhatsApp: +230 5979 7960 (Confirm availability before payment · Delivery up to 10 days)\n🛒 Browse Full Shop: ${baseUrl}`
+      ? `🧳 *A.B. DESAI MAURITIUS — OFFICIAL AMERICAN TOURISTER STORE*\n🔥 Skytrac 3-Piece Set: Rs 15,990 (Save Rs 4,510) · Skylette Set of 3: Rs 16,990 (Save Rs 9,490) · Dashway Set of 3: Rs 16,500 · Gemina Pro L on Sale: Rs 9,495!\n📍 Port-Louis · Tribeca · Trianon · Bagatelle · Cascavelle · Rose-Belle\n📲 WhatsApp: +230 5979 7960 (Confirm availability before payment · Delivery up to 10 days)\n🛒 Browse Full Shop: ${baseUrl}`
       : templateMode === 'series-lineup'
       ? `🧳 *AMERICAN TOURISTER ${selectedSeries.toUpperCase()} COLLECTION — A.B. DESAI*\n${seriesLineup.rows
           .slice(0, 4)
@@ -341,7 +341,7 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
 
       const rowImgs = await Promise.all(
         rows.map((r) =>
-          loadCorsSafeCanvasImage(r.image, seriesLineup.fallbackImage)
+          loadCorsSafeCanvasImage(r.image, r.image)
         )
       );
 
@@ -820,12 +820,12 @@ export const SocialShareModal: React.FC<SocialShareModalProps> = ({
                 <div className="p-2.5 bg-[#F9F9F8] space-y-1.5">
                   {seriesLineup.rows.slice(0, 4).map((r) => (
                     <div
-                      key={r.sizeClass}
+                      key={r.shortSize || r.sizeLabel}
                       className="bg-white rounded-lg border border-[#0F2942]/30 px-2.5 py-1.5 flex items-center justify-between gap-2"
                     >
                       <div className="w-10 h-11 shrink-0 flex items-center justify-center">
                         <ProductImage
-                          src={r.image || seriesLineup.fallbackImage}
+                          src={r.image}
                           alt={`${selectedSeries} ${r.sizeLabel}`}
                           series={selectedSeries}
                           title={r.sizeLabel}
